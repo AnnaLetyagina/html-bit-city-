@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Готовые ПК | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Ready-made PCs.css">
+
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item active" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Готовые ПК</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Заголовок страницы -->
+    <div class="container page-header">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="fw-bold mb-3">Готовые компьютеры</h1>
+                <p class="lead mb-0">Широкий выбор готовых решений для работы, игр и творчества</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <span class="badge bg-primary fs-6">В наличии: 127 моделей</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Фильтры -->
+            <div class="col-lg-3">
+                <div class="filter-card">
+                    <h5 class="filter-title">Фильтры</h5>
+
+                    <!-- Цена -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Цена, ₽</h6>
+                        <div class="row g-2 mb-2">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="От">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="До">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary w-100">Применить</button>
+                    </div>
+
+                    <!-- Назначение -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Назначение</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gaming">
+                            <label class="form-check-label" for="gaming">Игровые</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="office">
+                            <label class="form-check-label" for="office">Офисные</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="workstation">
+                            <label class="form-check-label" for="workstation">Рабочие станции</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="multimedia">
+                            <label class="form-check-label" for="multimedia">Мультимедийные</label>
+                        </div>
+                    </div>
+
+                    <!-- Производитель -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Производитель</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="asus">
+                            <label class="form-check-label" for="asus">ASUS</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="msi">
+                            <label class="form-check-label" for="msi">MSI</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hp">
+                            <label class="form-check-label" for="hp">HP</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lenovo">
+                            <label class="form-check-label" for="lenovo">Lenovo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acer">
+                            <label class="form-check-label" for="acer">Acer</label>
+                        </div>
+                    </div>
+
+                    <!-- Процессор -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Процессор</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="intel">
+                            <label class="form-check-label" for="intel">Intel Core i5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="intel-i7">
+                            <label class="form-check-label" for="intel-i7">Intel Core i7</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="intel-i9">
+                            <label class="form-check-label" for="intel-i9">Intel Core i9</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ryzen5">
+                            <label class="form-check-label" for="ryzen5">AMD Ryzen 5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ryzen7">
+                            <label class="form-check-label" for="ryzen7">AMD Ryzen 7</label>
+                        </div>
+                    </div>
+
+                    <!-- Видеокарта -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Видеокарта</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rtx3060">
+                            <label class="form-check-label" for="rtx3060">NVIDIA RTX 3060</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rtx3070">
+                            <label class="form-check-label" for="rtx3070">NVIDIA RTX 3070</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rtx3080">
+                            <label class="form-check-label" for="rtx3080">NVIDIA RTX 3080</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rtx3090">
+                            <label class="form-check-label" for="rtx3090">NVIDIA RTX 3090</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rx6700">
+                            <label class="form-check-label" for="rx6700">AMD RX 6700 XT</label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline-secondary w-100">Сбросить фильтры</button>
+                </div>
+            </div>
+
+            <!-- Список ПК -->
+            <div class="col-lg-9">
+                <!-- Сортировка -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Сортировка:</span>
+                        <select class="form-select form-select-sm" style="width: auto;">
+                            <option selected>По популярности</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                            <option>По новизне</option>
+                            <option>По рейтингу</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="text-muted">Найдено: 127 товаров</span>
+                    </div>
+                </div>
+
+                <!-- Карточки товаров -->
+                <div class="row g-4">
+                    <!-- ПК 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\88be906d-c27e-4f7d-997b-6057e0cf9034.png" class="card-img-top"
+                                    alt="Игровой ПК">
+                                <span class="pc-badge bg-danger">Топ продаж</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Игровой ПК ASUS ROG Strix</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> Intel Core i7-13700KF</li>
+                                        <li><i class="fas fa-memory me-2"></i> 32GB DDR5 RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> NVIDIA RTX 4070 Ti 12GB</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 1TB NVMe SSD + 2TB HDD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">149 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПК 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\a3a0fd77-d552-4937-aa78-83dfb08510ed.png" class="card-img-top"
+                                    alt="Игровой ПК">
+                                <span class="pc-badge bg-success">Новинка</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Игровой ПК MSI Infinite X</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> AMD Ryzen 9 7900X</li>
+                                        <li><i class="fas fa-memory me-2"></i> 64GB DDR5 RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> NVIDIA RTX 4080 16GB</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 2TB NVMe SSD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">219 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПК 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\35b4c433-c72e-4983-9424-1b8287993fc9.png" class="card-img-top"
+                                    alt="Офисный ПК">
+                                <span class="pc-badge bg-info">Эконом</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Офисный ПК Lenovo IdeaCentre</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> Intel Core i5-12400</li>
+                                        <li><i class="fas fa-memory me-2"></i> 16GB DDR4 RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> Intel UHD Graphics 730</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 512GB SSD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">54 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПК 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\f520363d-6589-4607-950c-d24405516732.png" class="card-img-top"
+                                    alt="Игровой ПК">
+                                <span class="pc-badge bg-warning text-dark">Выбор покупателей</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Игровой ПК Acer Predator Orion</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> Intel Core i9-13900KF</li>
+                                        <li><i class="fas fa-memory me-2"></i> 32GB DDR5 RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> NVIDIA RTX 4090 24GB</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 2TB NVMe SSD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">289 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПК 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\28f51318-cf67-4714-b23f-5b8876e191f5.png" class="card-img-top"
+                                    alt="Рабочая станция">
+                                <span class="pc-badge bg-primary">Профессиональный</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Рабочая станция HP Z6 G5</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> Intel Xeon W5-3425</li>
+                                        <li><i class="fas fa-memory me-2"></i> 64GB DDR5 ECC RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> NVIDIA RTX A6000 48GB</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 2TB NVMe SSD + 4TB HDD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">459 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ПК 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card pc-card h-100">
+                            <div class="position-relative">
+                                <img src="images\d0f2c2ae-8152-4fd9-acbb-8f7a4bd8f7b2.png" class="card-img-top"
+                                    alt="Мультимедийный ПК">
+                                <span class="pc-badge bg-secondary">Компактный</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Мультимедийный ПК ASUS Mini PC</h5>
+                                <div class="pc-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip me-2"></i> AMD Ryzen 7 7735HS</li>
+                                        <li><i class="fas fa-memory me-2"></i> 16GB DDR5 RAM</li>
+                                        <li><i class="fas fa-gamepad me-2"></i> AMD Radeon 680M</li>
+                                        <li><i class="fas fa-hdd me-2"></i> 1TB NVMe SSD</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">79 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинация -->
+                <nav aria-label="Page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка сравнения -->
+    <button class="btn btn-primary compare-btn rounded-pill">
+        <i class="fas fa-balance-scale me-2"></i> Сравнить (3)
+    </button>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация карточек при загрузке
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.pc-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+
+</html>

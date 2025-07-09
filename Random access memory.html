@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оперативная память DDR4/DDR5 | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Random access memory.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images\bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item active" href="Random access memory.html">Оперативная память</a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon me-3">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item"><a href="#">Комплектующие</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Оперативная память</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Заголовок страницы -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="fw-bold mb-0">Оперативная память</h1>
+                <div class="d-flex align-items-center">
+                    <span class="me-2">Сортировка:</span>
+                    <select class="form-select form-select-sm" style="width: auto;">
+                        <option selected>По популярности</option>
+                        <option>По возрастанию цены</option>
+                        <option>По убыванию цены</option>
+                        <option>По новизне</option>
+                        <option>По рейтингу</option>
+                    </select>
+                </div>
+            </div>
+            <hr class="my-3">
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Фильтры -->
+            <div class="col-lg-3 mb-4">
+                <div class="card filter-card mb-4">
+                    <div class="filter-header">
+                        <i class="fas fa-filter me-2"></i> Фильтры
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-2">Тип памяти</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ddr4" checked>
+                            <label class="form-check-label" for="ddr4">DDR4</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ddr5">
+                            <label class="form-check-label" for="ddr5">DDR5</label>
+                        </div>
+
+                        <h6 class="mt-3">Объем (ГБ)</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="8gb">
+                            <label class="form-check-label" for="8gb">8 ГБ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="16gb" checked>
+                            <label class="form-check-label" for="16gb">16 ГБ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="32gb" checked>
+                            <label class="form-check-label" for="32gb">32 ГБ</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="64gb">
+                            <label class="form-check-label" for="64gb">64 ГБ</label>
+                        </div>
+
+                        <h6 class="mt-3">Частота</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="freq1">
+                            <label class="form-check-label" for="freq1">до 3200 МГц</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="freq2" checked>
+                            <label class="form-check-label" for="freq2">3200-4800 МГц</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="freq3">
+                            <label class="form-check-label" for="freq3">от 4800 МГц</label>
+                        </div>
+
+                        <h6 class="mt-3">Производитель</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand1" checked>
+                            <label class="form-check-label" for="brand1">Kingston</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand2" checked>
+                            <label class="form-check-label" for="brand2">Corsair</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand3">
+                            <label class="form-check-label" for="brand3">G.Skill</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand4">
+                            <label class="form-check-label" for="brand4">Crucial</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brand5">
+                            <label class="form-check-label" for="brand5">Samsung</label>
+                        </div>
+
+                        <button class="btn btn-primary-bit w-100 mt-3">Применить фильтры</button>
+                        <button class="btn btn-outline-secondary w-100 mt-2">Сбросить все</button>
+                    </div>
+                </div>
+
+                <div class="card filter-card">
+                    <div class="filter-header">
+                        <i class="fas fa-fire me-2"></i> Топ продаж
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Kingston Fury Beast 16GB
+                                <span class="badge bg-primary-bit rounded-pill">1</span>
+                            </a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Corsair Vengeance RGB 32GB
+                                <span class="badge bg-primary-bit rounded-pill">2</span>
+                            </a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                G.Skill Trident Z5 32GB
+                                <span class="badge bg-primary-bit rounded-pill">3</span>
+                            </a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Crucial Ballistix 16GB
+                                <span class="badge bg-primary-bit rounded-pill">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Товары -->
+            <div class="col-lg-9">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Товар 1 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <img src="images\600x600.webp" class="card-img-top" alt="Kingston Fury Beast 16GB DDR4">
+                                <div class="discount-badge">-12%</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Kingston Fury Beast 16GB DDR4</h5>
+                                <p class="card-text text-muted">3200MHz, CL16, 1.35V, черный радиатор</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-decoration-line-through text-muted me-2">5 999 ₽</span>
+                                        <span class="fw-bold text-primary-bit">5 299 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 2 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <img src="images\600x600 (1).webp" class="card-img-top"
+                                alt="Corsair Vengeance RGB 32GB DDR5">
+                            <div class="card-body">
+                                <h5 class="card-title">Corsair Vengeance RGB 32GB DDR5</h5>
+                                <p class="card-text text-muted">5600MHz, CL36, 1.25V, RGB подсветка</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fw-bold text-primary-bit">12 999 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 3 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <img src="images\600x600 (2).webp" class="card-img-top"
+                                    alt="G.Skill Trident Z5 RGB 32GB DDR5">
+                                <div class="discount-badge">Новинка</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">G.Skill Trident Z5 RGB 32GB DDR5</h5>
+                                <p class="card-text text-muted">6000MHz, CL36, 1.35V, RGB подсветка</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fw-bold text-primary-bit">15 499 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 4 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <img src="images\600x600 (3).webp" class="card-img-top" alt="Crucial Ballistix 16GB DDR4">
+                            <div class="card-body">
+                                <h5 class="card-title">Crucial Ballistix 16GB DDR4</h5>
+                                <p class="card-text text-muted">3600MHz, CL16, 1.35V, красный радиатор</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fw-bold text-primary-bit">6 299 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 5 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <img src="images\600x600 (4).webp" class="card-img-top" alt="HyperX Predator 32GB DDR4">
+                                <div class="discount-badge">Топ продаж</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">HyperX Predator 32GB DDR4</h5>
+                                <p class="card-text text-muted">3200MHz, CL16, 1.35V, черный радиатор</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fw-bold text-primary-bit">9 999 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Товар 6 -->
+                    <div class="col">
+                        <div class="card product-card h-100">
+                            <img src="images\600x600 (5).webp" class="card-img-top" alt="Samsung Original 8GB DDR4">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Original 8GB DDR4</h5>
+                                <p class="card-text text-muted">2666MHz, CL19, 1.2V, без радиатора</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="fw-bold text-primary-bit">2 799 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <button class="btn btn-primary-bit w-100">В корзину</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинация -->
+                <nav aria-label="Page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Техническая информация -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Как выбрать оперативную память</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-microchip spec-icon"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Тип памяти</h5>
+                            <p class="text-muted">DDR4 - текущий стандарт с хорошим балансом цены и производительности.
+                                DDR5 - новое поколение с более высокой пропускной способностью, но и более высокой
+                                ценой. Убедитесь, что ваша материнская плата поддерживает выбранный тип памяти.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-memory spec-icon"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Объем памяти</h5>
+                            <p class="text-muted">Для офисных задач достаточно 8-16 ГБ. Игровые ПК требуют 16-32 ГБ.
+                                Профессиональные рабочие станции могут использовать 32-128 ГБ и более. Учитывайте, что
+                                для двухканального режима лучше использовать два или четыре модуля одинакового объема.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-tachometer-alt spec-icon"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Частота и тайминги</h5>
+                            <p class="text-muted">Частота (в МГц) влияет на пропускную способность. Тайминги (CL)
+                                определяют задержки. Более высокая частота и более низкие тайминги улучшают
+                                производительность, но увеличивают стоимость. Проверьте поддерживаемые частоты вашей
+                                материнской платы.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-snowflake spec-icon"></i>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5>Радиаторы и RGB</h5>
+                            <p class="text-muted">Радиаторы помогают отводить тепло при разгоне. RGB-подсветка - это
+                                эстетический элемент. Убедитесь, что высокие радиаторы не будут мешать установке
+                                процессорного кулера. Для компактных сборок выбирайте модули с низкопрофильными
+                                радиаторами.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Delivery and payment.html" class="text-white text-decoration-none">Доставка и
+                                оплата</a></li>
+                        <li><a href="Warranty and Refund.html" class="text-white text-decoration-none">Гарантия и
+                                возврат</a></li>
+                        <li><a href="Bonus program.html" class="text-white text-decoration-none">Бонусная программа</a>
+                        </li>
+                        <li><a href="Gift certificates.html" class="text-white text-decoration-none">Подарочные
+                                сертификаты</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="About us.html" class="text-white text-decoration-none">О нас</a></li>
+                        <li><a href="News.html" class="text-white text-decoration-none">Новости</a></li>
+                        <li><a href="Job openings.html" class="text-white text-decoration-none">Вакансии</a></li>
+                        <li><a href="Partners.html" class="text-white text-decoration-none">Партнеры</a></li>
+                        <li><a href="Contacts.html" class="text-white text-decoration-none">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</li>
+                        <li><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</li>
+                        <li><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</li>
+                        <li><i class="fas fa-clock me-2"></i> Пн-Пт: 9:00-20:00, Сб-Вс: 10:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-white text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация карточек товаров при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.product-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровые и офисные мыши | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item active" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <nav aria-label="breadcrumb" class="bg-light py-3">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item"><a href="#">Периферия</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Мыши</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Фильтры -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Фильтры</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Фильтр по типу -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Тип мыши</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gamingMouse">
+                                    <label class="form-check-label" for="gamingMouse">
+                                        Игровые
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="officeMouse">
+                                    <label class="form-check-label" for="officeMouse">
+                                        Офисные
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wirelessMouse">
+                                    <label class="form-check-label" for="wirelessMouse">
+                                        Беспроводные
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по бренду -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Бренд</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="logitech">
+                                    <label class="form-check-label" for="logitech">
+                                        Logitech
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="razer">
+                                    <label class="form-check-label" for="razer">
+                                        Razer
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="steelseries">
+                                    <label class="form-check-label" for="steelseries">
+                                        SteelSeries
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hyperx">
+                                    <label class="form-check-label" for="hyperx">
+                                        HyperX
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по цене -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Цена, ₽</h6>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="От">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="До">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary-bit w-100">Применить</button>
+                        </div>
+                    </div>
+
+                    <!-- Баннер -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <img src="images\8c96a358074d.jpg" class="card-img-top" alt="Спецпредложение">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Скидка 15%</h5>
+                            <p class="card-text">На все игровые мыши Razer</p>
+                            <a href="#" class="btn btn-sm btn-accent">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <!-- Заголовок и сортировка -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h1 class="fw-bold mb-0">Компьютерные мыши</h1>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown"
+                                data-bs-toggle="dropdown">
+                                Сортировка: По популярности
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">По популярности</a></li>
+                                <li><a class="dropdown-item" href="#">По возрастанию цены</a></li>
+                                <li><a class="dropdown-item" href="#">По убыванию цены</a></li>
+                                <li><a class="dropdown-item" href="#">По новизне</a></li>
+                                <li><a class="dropdown-item" href="#">По рейтингу</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Описание категории -->
+                    <div class="alert alert-info mb-4">
+                        <p class="mb-0">В нашем ассортименте представлены игровые, офисные и профессиональные мыши от
+                            ведущих производителей. Выберите оптимальную модель по характеристикам, дизайну и цене.</p>
+                    </div>
+
+                    <!-- Товары -->
+                    <div class="row g-4">
+                        <!-- Товар 1 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\7221335443.webp" class="card-img-top"
+                                        alt="Razer DeathAdder V3 Pro">
+                                    <div class="discount-badge">-15%</div>
+                                    <div class="new-badge">NEW</div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Razer DeathAdder V3 Pro</h5>
+                                    <p class="card-text text-muted">Беспроводная, 30K DPI, 70 часов работы</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">15 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">13 590 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 2 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <img src="images\600x600 (9).webp" class="card-img-top" alt="Logitech MX Master 3S">
+                                <div class="card-body">
+                                    <h5 class="card-title">Logitech MX Master 3S</h5>
+                                    <p class="card-text text-muted">Беспроводная, 8K DPI, для дизайнеров</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">11 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (10).webp" class="card-img-top" alt="SteelSeries Aerox 5">
+                                    <div class="discount-badge">-10%</div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">SteelSeries Aerox 5</h5>
+                                    <p class="card-text text-muted">Проводная, 18K DPI, 9 программируемых кнопок</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">9 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">8 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 4 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <img src="images\600x600 (11).webp" class="card-img-top" alt="HyperX Pulsefire Haste">
+                                <div class="card-body">
+                                    <h5 class="card-title">HyperX Pulsefire Haste</h5>
+                                    <p class="card-text text-muted">Проводная, 16K DPI, ультралегкая</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">6 490 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 5 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\yeni-proje-2022-03-16t152208748-e4aa01.jpg" class="card-img-top"
+                                        alt="Logitech G Pro X Superlight">
+                                    <div class="new-badge">NEW</div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Logitech G Pro X Superlight</h5>
+                                    <p class="card-text text-muted">Беспроводная, 25K DPI, 63г вес</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">14 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Товар 6 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card card h-100">
+                                <img src="images\i (10).webp" class="card-img-top" alt="Razer Basilisk V3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Razer Basilisk V3</h5>
+                                    <p class="card-text text-muted">Проводная, 26K DPI, 11 программируемых кнопок</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">8 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Дополнительная информация -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Как выбрать компьютерную мышь?</h3>
+                    <p>При выборе компьютерной мыши важно учитывать несколько ключевых параметров:</p>
+                    <ul>
+                        <li><strong>Тип сенсора:</strong> Оптический или лазерный. Оптические более универсальны,
+                            лазерные работают на стекле.</li>
+                        <li><strong>DPI/CPI:</strong> Чувствительность мыши. Для офиса достаточно 800-1600 DPI, для игр
+                            - от 4000 DPI.</li>
+                        <li><strong>Тип подключения:</strong> Проводные мыши надежнее, беспроводные удобнее.</li>
+                        <li><strong>Эргономика:</strong> Форма должна соответствовать размеру руки и хвату (пальцевой,
+                            ладонный, коготь).</li>
+                        <li><strong>Дополнительные кнопки:</strong> Полезны для игр и работы (навигация, макросы).</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Популярные бренды</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="brand-card p-3 bg-white rounded shadow-sm">
+                                <img src="https://logos-world.net/wp-content/uploads/2020/11/Razer-Logo.png" alt="Razer"
+                                    class="img-fluid mb-2" style="max-height: 30px;">
+                                <p class="mb-0">Лидер в производстве игровых мышей с инновационными технологиями.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="brand-card p-3 bg-white rounded shadow-sm">
+                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Logitech-Logo.png"
+                                    alt="Logitech" class="img-fluid mb-2" style="max-height: 30px;">
+                                <p class="mb-0">Широкий ассортимент для офиса и игр с отличным качеством.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="brand-card p-3 bg-white rounded shadow-sm">
+                                <img src="https://logos-world.net/wp-content/uploads/2021/02/SteelSeries-Logo.png"
+                                    alt="SteelSeries" class="img-fluid mb-2" style="max-height: 30px;">
+                                <p class="mb-0">Профессиональные игровые мыши для киберспорта.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="brand-card p-3 bg-white rounded shadow-sm">
+                                <img src="https://logos-world.net/wp-content/uploads/2021/03/HyperX-Logo.png"
+                                    alt="HyperX" class="img-fluid mb-2" style="max-height: 30px;">
+                                <p class="mb-0">Доступные игровые решения с хорошим качеством.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для карточек товаров
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.product-card, .brand-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card, .brand-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

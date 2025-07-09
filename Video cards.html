@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеокарты - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item active" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                    <li class="breadcrumb-item"><a href="#">Комплектующие</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Видеокарты</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Заголовок страницы -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="fw-bold mb-0">Видеокарты</h1>
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <label for="sortSelect" class="form-label mb-0">Сортировка:</label>
+                        <select class="form-select" id="sortSelect">
+                            <option selected>По популярности</option>
+                            <option value="1">По возрастанию цены</option>
+                            <option value="2">По убыванию цены</option>
+                            <option value="3">По новизне</option>
+                            <option value="4">По рейтингу</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="viewSelect" class="form-label mb-0">Вид:</label>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-secondary active"><i
+                                    class="fas fa-th"></i></button>
+                            <button type="button" class="btn btn-outline-secondary"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Фильтры -->
+                <div class="col-lg-3">
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Фильтры</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6 class="mb-3">Производитель</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="nvidia" checked>
+                                    <label class="form-check-label" for="nvidia">NVIDIA</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="amd" checked>
+                                    <label class="form-check-label" for="amd">AMD</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="intel">
+                                    <label class="form-check-label" for="intel">Intel</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Серия</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rtx40" checked>
+                                    <label class="form-check-label" for="rtx40">GeForce RTX 40</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rtx30" checked>
+                                    <label class="form-check-label" for="rtx30">GeForce RTX 30</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rx7000" checked>
+                                    <label class="form-check-label" for="rx7000">Radeon RX 7000</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rx6000">
+                                    <label class="form-check-label" for="rx6000">Radeon RX 6000</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Объем памяти</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="8gb" checked>
+                                    <label class="form-check-label" for="8gb">8 ГБ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="12gb" checked>
+                                    <label class="form-check-label" for="12gb">12 ГБ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="16gb" checked>
+                                    <label class="form-check-label" for="16gb">16 ГБ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="24gb">
+                                    <label class="form-check-label" for="24gb">24 ГБ</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Цена, ₽</h6>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="От" value="10000">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="До" value="300000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary-bit w-100">Применить фильтры</button>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Рекомендуем</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex mb-3">
+                                <img src="images/i.webp" class="me-3" width="80" alt="Видеокарта">
+                                <div>
+                                    <h6 class="mb-1">NVIDIA RTX 4070 Ti</h6>
+                                    <p class="text-primary-bit fw-bold mb-0">89 990 ₽</p>
+                                    <div class="text-warning small">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <img src="https://c.dns-shop.ru/thumb/st1/fit/300/300/6f9c0a8c0a5f8c5c3b8c7e9c7f8c4a1b/8b4b6f6c9b5c5a4c9a5c3d6c4a5c4a5c.jpg"
+                                    class="me-3" width="80" alt="Видеокарта">
+                                <div>
+                                    <h6 class="mb-1">AMD RX 7900 XT</h6>
+                                    <p class="text-primary-bit fw-bold mb-0">94 990 ₽</p>
+                                    <div class="text-warning small">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Список товаров -->
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Карточка товара 1 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images/i.webp" class="card-img-top" alt="Видеокарта NVIDIA RTX 4090">
+                                    <div class="discount-badge">-10%</div>
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA RTX 4090</h5>
+                                    <p class="card-text text-muted">24GB GDDR6X, 16384 CUDA, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">210 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">189 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\100047592432b1.webp" class="card-img-top"
+                                        alt="Видеокарта AMD RX 7900 XTX">
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">AMD RX 7900 XTX</h5>
+                                    <p class="card-text text-muted">24GB GDDR6, 6144 Stream, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">109 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\461144_O.png" class="card-img-top"
+                                        alt="Видеокарта NVIDIA RTX 4080">
+                                    <div class="discount-badge">-15%</div>
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA RTX 4080</h5>
+                                    <p class="card-text text-muted">16GB GDDR6X, 9728 CUDA, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">129 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">110 490 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\7610161626.webp" class="card-img-top"
+                                        alt="Видеокарта NVIDIA RTX 4070 Ti">
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA RTX 4070 Ti</h5>
+                                    <p class="card-text text-muted">12GB GDDR6X, 7680 CUDA, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">89 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 5 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\i (7).webp" class="card-img-top" alt="Видеокарта AMD RX 7900 XT">
+                                    <div class="discount-badge">-8%</div>
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">AMD RX 7900 XT</h5>
+                                    <p class="card-text text-muted">20GB GDDR6, 5376 Stream, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">102 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">94 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 6 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\i (8).webp" class="card-img-top" alt="Видеокарта NVIDIA RTX 4070">
+                                    <div class="wishlist-badge">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">NVIDIA RTX 4070</h5>
+                                    <p class="card-text text-muted">12GB GDDR6X, 5888 CUDA, PCI-E 4.0</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">69 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с характеристиками -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Как выбрать видеокарту</h2>
+                <p class="text-muted">Основные характеристики, на которые стоит обратить внимание</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h4 class="card-title">Графический процессор</h4>
+                            <p class="card-text">Определяет производительность видеокарты. NVIDIA и AMD - два основных
+                                производителя GPU.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-memory"></i>
+                            </div>
+                            <h4 class="card-title">Видеопамять</h4>
+                            <p class="card-text">Объем и тип памяти (GDDR6, GDDR6X) влияют на работу с высокими
+                                разрешениями и текстурами.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h4 class="card-title">Тактовая частота</h4>
+                            <p class="card-text">Чем выше частота GPU и памяти, тем быстрее видеокарта обрабатывает
+                                графику.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h4 class="card-title">Разъемы питания</h4>
+                            <p class="card-text">Мощные видеокарты требуют дополнительного питания (8-pin, 12-pin
+                                разъемы).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                            <h4 class="card-title">Выходы изображения</h4>
+                            <p class="card-text">HDMI, DisplayPort - важны для подключения мониторов с высоким
+                                разрешением и частотой.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-white shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-fan"></i>
+                            </div>
+                            <h4 class="card-title">Система охлаждения</h4>
+                            <p class="card-text">Вентиляторы или СЖО влияют на температуру и шумность работы видеокарты.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация всплывающих подсказок
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            // Анимация для карточек товаров
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

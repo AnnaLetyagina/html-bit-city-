@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторы - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item active" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                    <li class="breadcrumb-item"><a href="#">Периферия</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Мониторы</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Заголовок страницы -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="fw-bold mb-0">Мониторы</h1>
+                <div class="d-flex align-items-center">
+                    <span class="me-2">Сортировка:</span>
+                    <select class="form-select form-select-sm" style="width: auto;">
+                        <option selected>По популярности</option>
+                        <option>По цене (сначала дешевые)</option>
+                        <option>По цене (сначала дорогие)</option>
+                        <option>По новизне</option>
+                        <option>По рейтингу</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Фильтры -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Фильтры</h5>
+
+                            <!-- Фильтр по цене -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Цена, ₽</h6>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="От">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-primary-bit w-100">Применить</button>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по брендам -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Бренды</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand1" checked>
+                                    <label class="form-check-label" for="brand1">Samsung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand2" checked>
+                                    <label class="form-check-label" for="brand2">LG</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand3">
+                                    <label class="form-check-label" for="brand3">ASUS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand4">
+                                    <label class="form-check-label" for="brand4">Acer</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand5">
+                                    <label class="form-check-label" for="brand5">Dell</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand6">
+                                    <label class="form-check-label" for="brand6">MSI</label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по диагонали -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Диагональ</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="size1">
+                                    <label class="form-check-label" for="size1">До 24"</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="size2" checked>
+                                    <label class="form-check-label" for="size2">24"-27"</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="size3">
+                                    <label class="form-check-label" for="size3">27"-32"</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="size4">
+                                    <label class="form-check-label" for="size4">32" и более</label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по разрешению -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Разрешение</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="res1">
+                                    <label class="form-check-label" for="res1">Full HD (1920x1080)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="res2" checked>
+                                    <label class="form-check-label" for="res2">2K (2560x1440)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="res3">
+                                    <label class="form-check-label" for="res3">4K (3840x2160)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="res4">
+                                    <label class="form-check-label" for="res4">UltraWide (3440x1440)</label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по частоте обновления -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Частота обновления</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hz1">
+                                    <label class="form-check-label" for="hz1">60 Гц</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hz2" checked>
+                                    <label class="form-check-label" for="hz2">144 Гц</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hz3">
+                                    <label class="form-check-label" for="hz3">165 Гц</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="hz4">
+                                    <label class="form-check-label" for="hz4">240 Гц и более</label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по типу матрицы -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Тип матрицы</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="matrix1">
+                                    <label class="form-check-label" for="matrix1">IPS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="matrix2" checked>
+                                    <label class="form-check-label" for="matrix2">VA</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="matrix3">
+                                    <label class="form-check-label" for="matrix3">TN</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="matrix4">
+                                    <label class="form-check-label" for="matrix4">OLED</label>
+                                </div>
+                            </div>
+
+                            <!-- Кнопка сброса фильтров -->
+                            <button class="btn btn-outline-secondary w-100">Сбросить фильтры</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Список товаров -->
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Карточка товара 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (14).webp" class="card-img-top"
+                                        alt="Монитор Samsung Odyssey G7">
+                                    <div class="discount-badge">-10%</div>
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="text-muted ms-1">(24)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор Samsung Odyssey G7</h5>
+                                    <p class="card-text text-muted small">32", QHD (2560x1440), 240Hz, 1ms, Curved, VA,
+                                        HDR600</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">69 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit fs-5">62 990 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (12).webp" class="card-img-top" alt="Монитор LG UltraGear">
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span class="text-muted ms-1">(18)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор LG UltraGear 27GP850-B</h5>
+                                    <p class="card-text text-muted small">27", QHD (2560x1440), 180Hz, 1ms, IPS, NVIDIA
+                                        G-SYNC Compatible</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit fs-5">54 990 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (13).webp" class="card-img-top"
+                                        alt="Монитор ASUS TUF Gaming">
+                                    <div class="discount-badge">-15%</div>
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-warning text-dark">Мало</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="text-muted ms-1">(32)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор ASUS TUF Gaming VG27AQ</h5>
+                                    <p class="card-text text-muted small">27", QHD (2560x1440), 165Hz, 1ms, IPS, ELMB
+                                        Sync, G-SYNC Compatible</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">47 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit fs-5">40 790 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (15).webp" class="card-img-top"
+                                        alt="Монитор Dell UltraSharp">
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="text-muted ms-1">(15)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор Dell UltraSharp U2723QE</h5>
+                                    <p class="card-text text-muted small">27", 4K UHD (3840x2160), 60Hz, IPS Black, 98%
+                                        DCI-P3, HDR400</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit fs-5">68 990 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 5 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (16).webp" class="card-img-top" alt="Монитор MSI Optix">
+                                    <div class="discount-badge">-12%</div>
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span class="text-muted ms-1">(27)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор MSI Optix MAG274QRF-QD</h5>
+                                    <p class="card-text text-muted small">27", QHD (2560x1440), 165Hz, 1ms, IPS, Quantum
+                                        Dot, HDR400</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">52 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit fs-5">46 630 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 6 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="product-card card h-100">
+                                <div class="position-relative">
+                                    <img src="images\600x600 (17).webp" class="card-img-top"
+                                        alt="Монитор Acer Predator">
+                                    <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="badge bg-danger">Под заказ</span>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span class="text-muted ms-1">(19)</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title">Монитор Acer Predator XB323U GP</h5>
+                                    <p class="card-text text-muted small">32", QHD (2560x1440), 170Hz, 1ms, IPS, NVIDIA
+                                        G-SYNC, HDR600</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit fs-5">89 990 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h5>Быстрая доставка</h5>
+                        <p class="text-muted">Доставка по городу за 2 часа, по России - 1-3 дня</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Гарантия качества</h5>
+                        <p class="text-muted">Официальная гарантия на все товары до 3 лет</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h5>Удобная оплата</h5>
+                        <p class="text-muted">Наличные, карты, рассрочка и кредит</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5>Поддержка 24/7</h5>
+                        <p class="text-muted">Квалифицированные консультации в любое время</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для плавного появления элементов при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.product-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Обработка кликов по кнопкам "В корзину"
+            const addToCartButtons = document.querySelectorAll('.btn-primary-bit');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const productTitle = this.closest('.product-card').querySelector('.card-title').textContent;
+                    alert(`Товар "${productTitle}" добавлен в корзину!`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

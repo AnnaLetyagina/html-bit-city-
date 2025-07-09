@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Бит-Сити</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="User Page.css">
+</head>
+
+<body>
+    <!-- Навигация (как в основном шаблоне) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Выпадающее меню как в основном шаблоне -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <div class="dropdown">
+                        <a href="#" class="user-icon dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <h6 class="dropdown-header">Добро пожаловать, Иван!</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="user.html"><i class="fas fa-user-circle me-2"></i>Личный
+                                    кабинет</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-bag me-2"></i>Мои заказы</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Избранное</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="user-sidebar p-3">
+                        <div class="text-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Аватар пользователя"
+                                class="user-avatar mb-3">
+                            <h5 class="mb-1">Иван Петров</h5>
+                            <p class="text-muted small">Пользователь с 2022</p>
+                            <a href="#" class="btn btn-outline-primary-bit btn-sm">Редактировать профиль</a>
+                        </div>
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i> Обзор</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#orders"><i class="fas fa-shopping-bag"></i> Мои заказы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#wishlist"><i class="fas fa-heart"></i> Избранное</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#addresses"><i class="fas fa-map-marker-alt"></i> Адреса
+                                    доставки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#settings"><i class="fas fa-cog"></i> Настройки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Выйти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <!-- Обзор аккаунта -->
+                    <div class="user-card mb-4">
+                        <h4 class="mb-4">Обзор аккаунта</h4>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h3 class="text-primary-bit">5</h3>
+                                    <p class="mb-0">Заказов</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h3 class="text-primary-bit">12</h3>
+                                    <p class="mb-0">Избранных товаров</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="p-3 bg-light rounded text-center">
+                                    <h3 class="text-primary-bit">3</h3>
+                                    <p class="mb-0">Бонусных баллов</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-gift fa-2x me-3 text-primary-bit"></i>
+                                <div>
+                                    <h5 class="mb-1">Специальное предложение!</h5>
+                                    <p class="mb-0">У вас есть 3 бонусных балла. Вы можете использовать их для получения
+                                        скидки до 15% на следующий заказ.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Последние заказы -->
+                    <div class="user-card mb-4" id="orders">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Мои заказы</h4>
+                            <a href="#" class="btn btn-outline-primary-bit">Все заказы</a>
+                        </div>
+
+                        <div class="order-card p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <h5 class="mb-1">Заказ #BTS-2023-45678</h5>
+                                    <p class="text-muted small mb-0">Оформлен 15 октября 2023</p>
+                                </div>
+                                <div>
+                                    <span class="order-status status-delivered">Доставлен</span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <div class="d-flex mb-3">
+                                        <img src="images/6ac7fc09-3690-4fb3-b6ac-0853546612ef.png" alt="Товар"
+                                            class="product-thumbnail me-3">
+                                        <div>
+                                            <h6 class="mb-1">Игровой ноутбук ASUS ROG</h6>
+                                            <p class="text-muted small mb-0">1 × 127 490 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <h5 class="mb-2">Итого: 127 490 ₽</h5>
+                                    <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                                    <a href="#" class="btn btn-sm btn-primary-bit">Повторить заказ</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-card p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <h5 class="mb-1">Заказ #BTS-2023-41234</h5>
+                                    <p class="text-muted small mb-0">Оформлен 5 октября 2023</p>
+                                </div>
+                                <div>
+                                    <span class="order-status status-shipped">Отправлен</span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <div class="d-flex mb-3">
+                                        <img src="images/i.webp" alt="Товар" class="product-thumbnail me-3">
+                                        <div>
+                                            <h6 class="mb-1">Видеокарта NVIDIA RTX 4090</h6>
+                                            <p class="text-muted small mb-0">1 × 189 990 ₽</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="images/937c4cda57f011f09e01827efa7d9939.jpeg" alt="Товар"
+                                            class="product-thumbnail me-3">
+                                        <div>
+                                            <h6 class="mb-1">Игровая мышь Razer Viper V2 Pro</h6>
+                                            <p class="text-muted small mb-0">1 × 10 390 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <h5 class="mb-2">Итого: 200 380 ₽</h5>
+                                    <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                                    <a href="#" class="btn btn-sm btn-primary-bit">Отследить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Избранное -->
+                    <div class="user-card mb-4" id="wishlist">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Избранное</h4>
+                            <a href="#" class="btn btn-outline-primary-bit">Все избранные товары</a>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="wishlist-item p-3 border rounded h-100">
+                                    <div class="position-relative mb-3">
+                                        <img src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                                            class="img-fluid rounded" alt="Монитор">
+                                        <button
+                                            class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 rounded-circle">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <h6>Монитор Samsung Odyssey G7</h6>
+                                    <p class="text-muted small">32", QHD, 240Hz, 1ms, Curved</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">64 990 ₽</span>
+                                        <button class="btn btn-primary-bit btn-sm">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="wishlist-item p-3 border rounded h-100">
+                                    <div class="position-relative mb-3">
+                                        <img src="images/6ac7fc09-3690-4fb3-b6ac-0853546612ef.png"
+                                            class="img-fluid rounded" alt="Ноутбук">
+                                        <button
+                                            class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 rounded-circle">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <h6>Игровой ноутбук ASUS ROG</h6>
+                                    <p class="text-muted small">RTX 4080, Intel i9-13900H, 32GB RAM</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">149 990 ₽</span>
+                                            <span class="fw-bold">127 490 ₽</span>
+                                        </div>
+                                        <button class="btn btn-primary-bit btn-sm">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="wishlist-item p-3 border rounded h-100">
+                                    <div class="position-relative mb-3">
+                                        <img src="images/937c4cda57f011f09e01827efa7d9939.jpeg"
+                                            class="img-fluid rounded" alt="Мышь">
+                                        <button
+                                            class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 rounded-circle">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <h6>Игровая мышь Razer Viper V2 Pro</h6>
+                                    <p class="text-muted small">Беспроводная, 30K DPI, 80 часов работы</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">12 990 ₽</span>
+                                            <span class="fw-bold">10 390 ₽</span>
+                                        </div>
+                                        <button class="btn btn-primary-bit btn-sm">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Настройки -->
+                    <div class="user-card" id="settings">
+                        <h4 class="mb-4">Настройки аккаунта</h4>
+
+                        <ul class="nav nav-tabs mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#profile">Профиль</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#security">Безопасность</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#notifications">Уведомления</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="profile">
+                                <form class="settings-form">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName">Имя</label>
+                                            <input type="text" class="form-control" id="firstName" value="Иван">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName">Фамилия</label>
+                                            <input type="text" class="form-control" id="lastName" value="Петров">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            value="ivan.petrov@example.com">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="phone">Телефон</label>
+                                        <input type="tel" class="form-control" id="phone" value="+7 (912) 345-67-89">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="birthday">Дата рождения</label>
+                                        <input type="date" class="form-control" id="birthday" value="1990-05-15">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary-bit">Сохранить изменения</button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="security">
+                                <form class="settings-form">
+                                    <div class="mb-4">
+                                        <label for="currentPassword">Текущий пароль</label>
+                                        <input type="password" class="form-control" id="currentPassword">
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="newPassword">Новый пароль</label>
+                                            <input type="password" class="form-control" id="newPassword">
+                                            <small class="text-muted">Минимум 8 символов</small>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="confirmPassword">Подтвердите пароль</label>
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                        <label class="form-check-label" for="twoFactorAuth">
+                                            Двухфакторная аутентификация
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary-bit">Обновить пароль</button>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="notifications">
+                                <form class="settings-form">
+                                    <h5 class="mb-3">Email-уведомления</h5>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="orderNotifications" checked>
+                                        <label class="form-check-label" for="orderNotifications">
+                                            Уведомления о заказах
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="promoNotifications" checked>
+                                        <label class="form-check-label" for="promoNotifications">
+                                            Специальные предложения и акции
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="newsNotifications">
+                                        <label class="form-check-label" for="newsNotifications">
+                                            Новости и обновления
+                                        </label>
+                                    </div>
+
+                                    <h5 class="mb-3">SMS-уведомления</h5>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="smsOrderNotifications"
+                                            checked>
+                                        <label class="form-check-label" for="smsOrderNotifications">
+                                            Статус заказа
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="smsDeliveryNotifications">
+                                        <label class="form-check-label" for="smsDeliveryNotifications">
+                                            Уведомления о доставке
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary-bit">Сохранить настройки</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (как в основном шаблоне) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Простая анимация для плавного появления элементов при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.order-card, .wishlist-item');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.order-card, .wishlist-item');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images\bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">Технологии, которые вдохновляют</h1>
+                    <p class="lead mb-4">Решения, которые работают. Широкий ассортимент компьютерной техники и
+                        комплектующих для профессионалов и энтузиастов.</p>
+                    <div class="d-flex gap-3">
+                        <a href="Product catalog.html" class="btn btn-accent btn-lg px-4">Каталог товаров</a>
+                        <a href="Stocks.html" class="btn btn-outline-light btn-lg px-4">Акции</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images\5334ae41-21c8-4514-9b3f-5ab2c0476033.png" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\22214852-ddc8-420b-9c55-d69b9fc85673.png" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\a194d208-7a3f-459a-ab98-7ee4489edf3d.png" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h5>Быстрая доставка</h5>
+                        <p class="text-muted">Доставка по городу за 2 часа, по России - 1-3 дня</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Гарантия качества</h5>
+                        <p class="text-muted">Официальная гарантия на все товары до 3 лет</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h5>Удобная оплата</h5>
+                        <p class="text-muted">Наличные, карты, рассрочка и кредит</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5>Поддержка 24/7</h5>
+                        <p class="text-muted">Квалифицированные консультации в любое время</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Категории -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Категории товаров</h2>
+                <p class="text-muted">Выберите интересующую вас категорию</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="Laptops.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h5>Ноутбуки</h5>
+                            <p class="text-center text-muted">Игровые, офисные, ультрабуки</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="Computers.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h5>Компьютеры</h5>
+                            <p class="text-center text-muted">Готовые сборки и комплектующие</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="Gaming.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h5>Гейминг</h5>
+                            <p class="text-center text-muted">Видеокарты, мониторы, аксессуары</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="The periphery.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <h5>Периферия</h5>
+                            <p class="text-center text-muted">Клавиатуры, мыши, наушники</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные товары -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="fw-bold">Популярные товары</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card card h-100">
+                        <div class="position-relative">
+                            <img src="images\6ac7fc09-3690-4fb3-b6ac-0853546612ef.png" class="card-img-top"
+                                alt="Игровой ноутбук">
+                            <div class="discount-badge">-15%</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Игровой ноутбук ASUS ROG</h5>
+                            <p class="card-text text-muted">RTX 4080, Intel i9-13900H, 32GB RAM, 1TB SSD</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-decoration-line-through text-muted me-2">149 990 ₽</span>
+                                    <span class="fw-bold text-primary-bit">127 490 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card card h-100">
+                        <img src="images\i.webp" class="card-img-top" alt="Видеокарта">
+                        <div class="card-body">
+                            <h5 class="card-title">Видеокарта NVIDIA RTX 4090</h5>
+                            <p class="card-text text-muted">24GB GDDR6X, 16384 CUDA, PCI-E 4.0</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit">189 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card card h-100">
+                        <div class="position-relative">
+                            <img src="images\937c4cda57f011f09e01827efa7d9939.jpeg" class="card-img-top"
+                                alt="Игровая мышь">
+                            <div class="discount-badge">-20%</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Игровая мышь Razer Viper V2 Pro</h5>
+                            <p class="card-text text-muted">Беспроводная, 30K DPI, 80 часов работы</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-decoration-line-through text-muted me-2">12 990 ₽</span>
+                                    <span class="fw-bold text-primary-bit">10 390 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card card h-100">
+                        <img src="https://images.unsplash.com/photo-1551645120-d70bfe84c826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                            class="card-img-top" alt="Монитор">
+                        <div class="card-body">
+                            <h5 class="card-title">Монитор Samsung Odyssey G7</h5>
+                            <p class="card-text text-muted">32", QHD, 240Hz, 1ms, Curved</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit">64 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Акции -->
+    <section class="py-5 bg-primary-bit text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Акции и спецпредложения</h2>
+                <p>Только сейчас специальные условия на лучшие товары</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-danger fs-5">-30%</span>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Сборка ПК</h4>
+                            <p class="card-text">Профессиональная сборка компьютера с гарантией и бесплатной доставкой
+                            </p>
+                            <div class="my-3">
+                                <span class="text-decoration-line-through text-muted me-2">5 000 ₽</span>
+                                <span class="fw-bold fs-4">3 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-danger fs-5">Подарок</span>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Игровая мышь в подарок</h4>
+                            <p class="card-text">При покупке любого игрового ноутбука получите бесплатно игровую мышь
+                            </p>
+                            <div class="my-3">
+                                <span class="fw-bold fs-4">Бесплатно</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <span class="badge bg-danger fs-5">Рассрочка 0%</span>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Кредит без переплат</h4>
+                            <p class="card-text">Оформите покупку в рассрочку на 12 месяцев без процентов и переплат</p>
+                            <div class="my-3">
+                                <span class="fw-bold fs-4">0% на 12 мес.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section id="about">
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-4">О компании <span class="text-primary-bit">Бит-Сити</span></h2>
+                        <p class="lead">Мы - ведущий поставщик компьютерной техники и комплектующих с 2010 года.</p>
+                        <p>Наша миссия - предоставлять клиентам передовые технологические решения по доступным ценам. Мы
+                            сотрудничаем с ведущими мировыми производителями и предлагаем только оригинальную продукцию
+                            с
+                            официальной гарантией.</p>
+                        <p>В нашем ассортименте представлено более 5000 товаров для профессиональных и домашних
+                            пользователей. Наши специалисты всегда готовы помочь с выбором и ответить на любые вопросы.
+                        </p>
+                        <a href="About us.html" class="btn btn-primary-bit mt-3">Подробнее о нас</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                            alt="Наша команда" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Отзывы наших клиентов</h2>
+                    <p class="text-muted">Что говорят о нас покупатели</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клиент"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Александр Петров</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Заказывал игровой ноутбук, доставили быстрее, чем обещали. Качество товара на высоте,
+                                все
+                                работает отлично. Отдельное спасибо консультанту за помощь в выборе!"</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клиент"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Елена Смирнова</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Покупала компьютер для работы. Очень понравился сервис - помогли подобрать оптимальную
+                                конфигурацию под мои задачи. Цены ниже, чем у конкурентов, а качество обслуживания на
+                                уровне."</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Клиент"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Дмитрий Иванов</h5>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Лучший магазин техники! Регулярно покупаю комплектующие для апгрейда. Всегда в наличии
+                                то,
+                                что нужно, а если чего-то нет - привозят очень быстро. Рекомендую!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Рассылка -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mb-4">Подпишитесь на рассылку</h2>
+                        <p class="mb-5">Получайте эксклюзивные предложения, новости о скидках и новинках первыми</p>
+
+                        <form class="row g-2 justify-content-center">
+                            <div class="col-md-8">
+                                <input type="email" class="form-control form-control-lg" placeholder="Ваш email">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-gold btn-lg w-100">Подписаться</button>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agreeCheck">
+                                    <label class="form-check-label" for="agreeCheck">
+                                        Я согласен на обработку персональных данных
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <!-- Добавьте этот код перед разделом "Футер" (перед <footer>) -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Раздел FAQ -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Часто задаваемые вопросы</h2>
+                    <p class="text-muted">Найдите ответы на популярные вопросы</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Вопрос 1 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="fas fa-question-circle text-primary-bit me-2"></i>
+                                        Какой срок доставки заказов?
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Сроки доставки зависят от вашего местоположения:</p>
+                                        <ul>
+                                            <li><strong>Белоярский:</strong> 1-2 рабочих дня, возможна доставка в день
+                                                заказа
+                                            </li>
+                                            <li><strong>Другие города России:</strong> 3-7 рабочих дней в зависимости от
+                                                региона
+                                            </li>
+                                            <li><strong>Самовывоз:</strong> доступен в день заказа из нашего магазина по
+                                                адресу:
+                                                г. Белоярский 1 мкр. 11 дом 1 кв.</li>
+                                        </ul>
+                                        <p>Точные сроки будут указаны при оформлении заказа после выбора способа
+                                            доставки.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Вопрос 2 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fas fa-shield-alt text-primary-bit me-2"></i>
+                                        Какие гарантии предоставляются на товары?
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Мы предоставляем официальную гарантию производителя на все товары:</p>
+                                        <ul>
+                                            <li>Компьютеры и ноутбуки - от 1 до 3 лет</li>
+                                            <li>Комплектующие - от 1 до 2 лет</li>
+                                            <li>Периферия - 1 год</li>
+                                        </ul>
+                                        <p>Гарантия распространяется на производственные дефекты и неисправности, не
+                                            связанные с
+                                            неправильной эксплуатацией. Для активации гарантии сохраняйте оригинальную
+                                            упаковку
+                                            и товарный чек.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Вопрос 3 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <i class="fas fa-exchange-alt text-primary-bit me-2"></i>
+                                        Как осуществить возврат или обмен товара?
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Вы можете вернуть или обменять товар в течение 14 дней с момента покупки при
+                                            соблюдении следующих условий:</p>
+                                        <ul>
+                                            <li>Товар не был в употреблении</li>
+                                            <li>Сохранены все заводские пломбы и ярлыки</li>
+                                            <li>Имеется товарный чек или иное подтверждение покупки</li>
+                                            <li>Сохранилась оригинальная упаковка</li>
+                                        </ul>
+                                        <p>Для возврата или обмена обратитесь в наш магазин с паспортом и заполните
+                                            заявление.
+                                            Деньги будут возвращены в течение 3-10 рабочих дней в зависимости от способа
+                                            оплаты.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Вопрос 4 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <i class="fas fa-credit-card text-primary-bit me-2"></i>
+                                        Какие способы оплаты доступны?
+                                    </button>
+                                </h3>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Мы предлагаем несколько удобных способов оплаты:</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Онлайн-оплата:</h6>
+                                                <ul>
+                                                    <li>Банковские карты (Visa, Mastercard, МИР)</li>
+                                                    <li>Apple Pay, Google Pay</li>
+                                                    <li>СБП (Система быстрых платежей)</li>
+                                                    <li>QIWI Кошелек</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6>Другие способы:</h6>
+                                                <ul>
+                                                    <li>Наличные при получении</li>
+                                                    <li>Безналичный расчет для юридических лиц</li>
+                                                    <li>Рассрочка и кредит (до 24 месяцев)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Вопрос 5 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <i class="fas fa-laptop-code text-primary-bit me-2"></i>
+                                        Предоставляете ли вы услуги по сборке ПК?
+                                    </button>
+                                </h3>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p>Да, мы предлагаем профессиональные услуги по сборке компьютеров:</p>
+                                        <ul>
+                                            <li><strong>Базовая сборка:</strong> установка комплектующих в корпус,
+                                                подключение
+                                                проводов, монтаж системы охлаждения</li>
+                                            <li><strong>Расширенная сборка:</strong> базовая сборка + установка ОС,
+                                                драйверов и
+                                                базового ПО</li>
+                                            <li><strong>Премиум сборка:</strong> расширенная сборка + кабель-менеджмент,
+                                                разгон
+                                                компонентов, стресс-тестирование</li>
+                                        </ul>
+                                        <p>Стоимость услуг зависит от сложности сборки и начинается от 3 500 рублей. При
+                                            заказе
+                                            комплектующих у нас вы получаете скидку 15% на услуги сборки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <p>Не нашли ответ на свой вопрос?</p>
+                            <a href="#" class="btn btn-primary-bit px-4">
+                                <i class="fas fa-headset me-2"></i> Связаться с поддержкой
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                        <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                        <div class="mt-4">
+                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Покупателям</h5>
+                        <div class="footer-links">
+                            <a href="Delivery and payment.html">Доставка и оплата</a>
+                            <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                            <a href="Bonus program.html">Бонусная программа</a>
+                            <a href="Gift certificates.html">Подарочные сертификаты</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Компания</h5>
+                        <div class="footer-links">
+                            <a href="About us.html">О нас</a>
+                            <a href="News.html">Новости</a>
+                            <a href="Job openings.html">Вакансии</a>
+                            <a href="Partners.html">Партнеры</a>
+                            <a href="Contacts.html">Контакты</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Контакты</h5>
+                        <div class="mb-3">
+                            <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                            <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                            <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                        </div>
+                        <div>
+                            <div class="payment-methods">
+                                <h6 class="text-white mb-3">Способы оплаты</h6>
+                                <div class="payment-icons">
+                                    <!-- Основные российские платежные системы -->
+                                    <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                    <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                    <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+
+                                    <!-- Международные системы с поддержкой в России -->
+                                    <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                    <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+
+                                    <!-- Популярные российские сервисы -->
+                                    <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4 bg-secondary">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="Privacy policy.html" class="text-decoration-none me-3">Политика
+                                конфиденциальности</a>
+                            <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Простая анимация для плавного появления элементов при скролле
+            document.addEventListener('DOMContentLoaded', function () {
+                const animateOnScroll = function () {
+                    const elements = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+
+                    elements.forEach(element => {
+                        const elementPosition = element.getBoundingClientRect().top;
+                        const screenPosition = window.innerHeight / 1.2;
+
+                        if (elementPosition < screenPosition) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }
+                    });
+                };
+
+                // Установка начального состояния для анимации
+                const cards = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+                cards.forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                });
+
+                // Запуск анимации при загрузке и скролле
+                animateOnScroll();
+                window.addEventListener('scroll', animateOnScroll);
+            });
+        </script>
+</body>
+
+</html>

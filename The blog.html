@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="The blog.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                    </li>
+                    <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                    <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                    <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                    <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <h6 class="dropdown-header">Периферия</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                    <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                    <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                    <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Stocks.html">Акции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="The blog.html">Блог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About us.html">О компании</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacts.html">Контакты</a>
+                </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция блога -->
+    <section class="blog-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Блог Бит-Сити</h1>
+            <p class="lead mb-4">Новости, обзоры и полезные статьи о компьютерной технике и технологиях</p>
+            <div class="d-flex justify-content-center">
+                <div class="search-box w-50">
+                    <input type="text" class="form-control form-control-lg" placeholder="Поиск по блогу...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Основная колонка -->
+                <div class="col-lg-8">
+                    <div class="mb-4">
+                        <h2 class="fw-bold">Последние статьи</h2>
+                        <p class="text-muted">Свежие материалы от наших экспертов</p>
+                    </div>
+
+                    <!-- Статьи -->
+                    <div class="row g-4 mb-5">
+                        <!-- Статья 1 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                    class="card-img-top blog-card-img" alt="Обзор нового процессора">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-hardware">Железо</span>
+                                        <span class="tag tag-news">Новинки</span>
+                                    </div>
+                                    <h5 class="card-title">Обзор Intel Core i9-13900K: новый король производительности
+                                    </h5>
+                                    <p class="card-text text-muted">Разбираемся, стоит ли обновляться на флагманский
+                                        процессор 13-го поколения и какие преимущества он дает.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Алексей Семенов</small>
+                                            <small class="text-muted">15 мая 2023 · 8 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Статья 2 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80"
+                                    class="card-img-top blog-card-img" alt="Игровой монитор">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-gaming">Гейминг</span>
+                                        <span class="tag tag-hardware">Железо</span>
+                                    </div>
+                                    <h5 class="card-title">ТОП-5 игровых мониторов 2023 года: наш выбор</h5>
+                                    <p class="card-text text-muted">Сравниваем лучшие игровые мониторы этого года по
+                                        соотношению цена/качество для разных бюджетов.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Мария Иванова</small>
+                                            <small class="text-muted">10 мая 2023 · 6 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Статья 3 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                    class="card-img-top blog-card-img" alt="Оптимизация Windows">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-software">Софт</span>
+                                    </div>
+                                    <h5 class="card-title">10 способов ускорить Windows 11 без замены железа</h5>
+                                    <p class="card-text text-muted">Простые и эффективные методы оптимизации системы,
+                                        которые помогут вернуть вашему компьютеру былую скорость.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Дмитрий Петров</small>
+                                            <small class="text-muted">5 мая 2023 · 10 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Статья 4 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1741&q=80"
+                                    class="card-img-top blog-card-img" alt="Ноутбук для работы">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-hardware">Железо</span>
+                                    </div>
+                                    <h5 class="card-title">Как выбрать ноутбук для работы в 2023 году: гайд для
+                                        профессионалов</h5>
+                                    <p class="card-text text-muted">Подробное руководство по выбору ноутбука для разных
+                                        профессиональных задач: от программирования до графического дизайна.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Анна Кузнецова</small>
+                                            <small class="text-muted">28 апреля 2023 · 12 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Статья 5 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80"
+                                    class="card-img-top blog-card-img" alt="Игровая видеокарта">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-gaming">Гейминг</span>
+                                        <span class="tag tag-hardware">Железо</span>
+                                    </div>
+                                    <h5 class="card-title">NVIDIA RTX 4070 vs AMD RX 7800 XT: битва среднего класса</h5>
+                                    <p class="card-text text-muted">Сравниваем две самые ожидаемые видеокарты этого года
+                                        в различных игровых сценариях и рабочих нагрузках.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Игорь Васильев</small>
+                                            <small class="text-muted">22 апреля 2023 · 9 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Статья 6 -->
+                        <div class="col-md-6">
+                            <div class="card blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"
+                                    class="card-img-top blog-card-img" alt="SSD накопитель">
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="tag tag-hardware">Железо</span>
+                                        <span class="tag tag-news">Новинки</span>
+                                    </div>
+                                    <h5 class="card-title">SSD с PCIe 5.0: стоит ли переплачивать за новые стандарты?
+                                    </h5>
+                                    <p class="card-text text-muted">Анализируем реальную производительность накопителей
+                                        нового поколения и их преимущества для обычных пользователей.</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Автор"
+                                            class="author-img me-2">
+                                        <div>
+                                            <small class="d-block">Сергей Михайлов</small>
+                                            <small class="text-muted">18 апреля 2023 · 7 мин чтения</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary-bit w-100">Читать статью</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Навигация по страницам">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Назад</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Сайдбар -->
+                <div class="col-lg-4">
+                    <div class="sidebar-card">
+                        <!-- Категории -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary-bit text-white">
+                                <h5 class="mb-0">Категории</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Железо</a>
+                                        <span class="badge bg-primary-bit rounded-pill">24</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Гейминг</a>
+                                        <span class="badge bg-primary-bit rounded-pill">18</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Софт</a>
+                                        <span class="badge bg-primary-bit rounded-pill">12</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Новинки</a>
+                                        <span class="badge bg-primary-bit rounded-pill">15</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#" class="text-decoration-none">Советы</a>
+                                        <span class="badge bg-primary-bit rounded-pill">21</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Популярные статьи -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary-bit text-white">
+                                <h5 class="mb-0">Популярное</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="popular-post">
+                                    <img src="https://images.unsplash.com/photo-1587202372775-e229f1725e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"
+                                        alt="Популярная статья" class="popular-post-img">
+                                    <div>
+                                        <h6 class="popular-post-title"><a href="#" class="text-decoration-none">Как
+                                                собрать игровой ПК за 100 000 рублей в 2023</a></h6>
+                                        <div class="popular-post-date">12 апреля 2023</div>
+                                    </div>
+                                </div>
+                                <div class="popular-post">
+                                    <img src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                        alt="Популярная статья" class="popular-post-img">
+                                    <div>
+                                        <h6 class="popular-post-title"><a href="#" class="text-decoration-none">10
+                                                ошибок при сборке компьютера, которые совершают новички</a></h6>
+                                        <div class="popular-post-date">5 апреля 2023</div>
+                                    </div>
+                                </div>
+                                <div class="popular-post">
+                                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                                        alt="Популярная статья" class="popular-post-img">
+                                    <div>
+                                        <h6 class="popular-post-title"><a href="#" class="text-decoration-none">Обзор
+                                                Windows 11 22H2: что нового и стоит ли обновляться</a></h6>
+                                        <div class="popular-post-date">28 марта 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Теги -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary-bit text-white">
+                                <h5 class="mb-0">Теги</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap">
+                                    <a href="#" class="tag tag-hardware me-2 mb-2">Процессоры</a>
+                                    <a href="#" class="tag tag-gaming me-2 mb-2">Видеокарты</a>
+                                    <a href="#" class="tag tag-software me-2 mb-2">Windows</a>
+                                    <a href="#" class="tag tag-hardware me-2 mb-2">SSD</a>
+                                    <a href="#" class="tag tag-gaming me-2 mb-2">Игры</a>
+                                    <a href="#" class="tag tag-news me-2 mb-2">Новинки</a>
+                                    <a href="#" class="tag tag-hardware me-2 mb-2">ОЗУ</a>
+                                    <a href="#" class="tag tag-software me-2 mb-2">Оптимизация</a>
+                                    <a href="#" class="tag tag-gaming me-2 mb-2">FPS</a>
+                                    <a href="#" class="tag tag-hardware me-2 mb-2">Охлаждение</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Рассылка -->
+                        <div class="card">
+                            <div class="card-header bg-primary-bit text-white">
+                                <h5 class="mb-0">Рассылка</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Подпишитесь на нашу рассылку, чтобы получать новые статьи первыми</p>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Ваш email">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary-bit w-100">Подписаться</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика
+                            конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для карточек блога
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.blog-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.blog-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

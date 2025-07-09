@@ -1,0 +1,40 @@
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+}
+
+.socket-badge {
+    background-color: #6c757d;
+    color: white;
+}
+
+.chipset-badge {
+    background-color: #343a40;
+    color: white;
+}
+
+.form-factor-badge {
+    background-color: #495057;
+    color: white;
+}
+
+.specs-icon {
+    font-size: 1.2rem;
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+.specs-item {
+    margin-bottom: 10px;
+}
+
+.filter-card {
+    transition: all 0.3s ease;
+}
+
+.filter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="About us.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                    </li>
+                    <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                    <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                    <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                    <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <h6 class="dropdown-header">Периферия</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                    <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                    <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                    <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Stocks.html">Акции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="The blog.html">Блог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О компании</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacts.html">Контакты</a>
+                </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="about-hero text-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-4">О компании Бит-Сити</h1>
+            <p class="lead mb-5">Технологии будущего - доступные сегодня</p>
+            <a href="#our-story" class="btn btn-primary btn-lg px-4 me-2">Наша история</a>
+            <a href="#our-team" class="btn btn-outline-light btn-lg px-4">Наша команда</a>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Кто мы такие</h2>
+                    <p class="lead">Бит-Сити - это не просто магазин компьютерной техники, это сообщество профессионалов
+                        и энтузиастов, объединенных страстью к технологиям.</p>
+                    <p>Основанная в 2010 году, наша компания прошла путь от небольшого магазина комплектующих до одного
+                        из лидеров рынка компьютерной техники в регионе. Мы гордимся тем, что сохранили индивидуальный
+                        подход к каждому клиенту, несмотря на рост и развитие.</p>
+                    <p>Наша миссия - делать передовые технологии доступными для каждого, помогая клиентам находить
+                        оптимальные решения для работы, творчества и развлечений.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <div class="text-center">
+                            <h3 class="text-primary fw-bold">12+</h3>
+                            <p class="text-muted">Лет на рынке</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-primary fw-bold">5000+</h3>
+                            <p class="text-muted">Товаров в ассортименте</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-primary fw-bold">25 000+</h3>
+                            <p class="text-muted">Довольных клиентов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                        alt="Наш магазин" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши ценности -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Наши ценности</h2>
+                <p class="text-muted">Принципы, которые лежат в основе нашей работы</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-medal fa-3x text-primary"></i>
+                        </div>
+                        <h4>Качество</h4>
+                        <p>Мы работаем только с проверенными поставщиками и предлагаем исключительно оригинальную
+                            продукцию с официальной гарантией.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-hand-holding-heart fa-3x text-primary"></i>
+                        </div>
+                        <h4>Клиентоориентированность</h4>
+                        <p>Индивидуальный подход к каждому покупателю, помощь в выборе и послепродажное сопровождение -
+                            наш приоритет.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                        </div>
+                        <h4>Инновации</h4>
+                        <p>Мы следим за технологическими трендами и всегда в курсе новинок, чтобы предложить вам лучшее.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-balance-scale fa-3x text-primary"></i>
+                        </div>
+                        <h4>Честность</h4>
+                        <p>Прозрачные условия сотрудничества, честные цены и полная информация о товарах.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-users fa-3x text-primary"></i>
+                        </div>
+                        <h4>Командный дух</h4>
+                        <p>Наши сотрудники - это команда профессионалов, которые поддерживают друг друга и развиваются
+                            вместе с компанией.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card p-4 bg-white h-100">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-line fa-3x text-primary"></i>
+                        </div>
+                        <h4>Развитие</h4>
+                        <p>Мы постоянно совершенствуем наш сервис, расширяем ассортимент и улучшаем качество
+                            обслуживания.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наша история -->
+    <section id="our-story" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Наша история</h2>
+                <p class="text-muted">Как мы росли и развивались</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2010</h4>
+                        <p>Основание компании. Открытие первого магазина компьютерных комплектующих в центре города
+                            площадью 50 кв.м.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2012</h4>
+                        <p>Расширение ассортимента и открытие интернет-магазина. Первые 1000 заказов онлайн.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2014</h4>
+                        <p>Переезд в новый офис и складской комплекс площадью 300 кв.м. Начало сотрудничества с ведущими
+                            мировыми брендами.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2016</h4>
+                        <p>Запуск сервисного центра и службы технической поддержки. Введение услуги сборки компьютеров
+                            под заказ.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2018</h4>
+                        <p>Открытие второго розничного магазина в городе. Расширение команды до 15 человек.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2020</h4>
+                        <p>Модернизация логистической системы. Введение экспресс-доставки по городу в течение 2 часов.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2023</h4>
+                        <p>Запуск собственной линейки игровых компьютеров Bit-City Pro. Более 5000 довольных клиентов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наша команда -->
+    <section id="our-team" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Наша команда</h2>
+                <p class="text-muted">Профессионалы, которые помогут вам с выбором</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card text-center p-4 bg-white h-100">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Основатель компании"
+                            class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Иван Петров</h4>
+                        <p class="text-primary">Основатель и CEO</p>
+                        <p>Создал компанию с нуля и продолжает руководить стратегическим развитием.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card text-center p-4 bg-white h-100">
+                        <img src="images\de3c20e65cb211f0ab3db225f0806def.jpeg" alt="Технический директор"
+                            class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Елена Смирнова</h4>
+                        <p class="text-primary">Технический директор</p>
+                        <p>Отвечает за подбор ассортимента и техническую экспертизу всех товаров.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card text-center p-4 bg-white h-100">
+                        <img src="images\e95996ee5cb211f0a8750a89abf0e547.jpeg" alt="Руководитель отдела продаж"
+                            class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Алексей Козлов</h4>
+                        <p class="text-primary">Руководитель отдела продаж</p>
+                        <p>Обеспечивает высокий уровень сервиса и удовлетворенность клиентов.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card text-center p-4 bg-white h-100">
+                        <img src="images\f05ad3855cb211f08e76ca584e6b65f6.jpeg" alt="Маркетинг-директор"
+                            class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Ольга Иванова</h4>
+                        <p class="text-primary">Маркетинг-директор</p>
+                        <p>Разрабатывает стратегию продвижения компании и взаимодействия с клиентами.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="lead">И еще 25 профессионалов в нашем дружном коллективе</p>
+                <a href="Job openings.html" class="btn btn-outline-primary">Вакансии</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Награды и партнеры -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Наши достижения и партнеры</h2>
+                <p class="text-muted">Признание рынка и доверие ведущих брендов</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-light rounded">
+                        <i class="fas fa-trophy fa-3x text-warning mb-3"></i>
+                        <h4>Лучший ИТ-ритейлер 2022</h4>
+                        <p>По версии региональной премии "Технологии и бизнес"</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-light rounded">
+                        <i class="fas fa-star fa-3x text-warning mb-3"></i>
+                        <h4>Официальный партнер</h4>
+                        <p>15+ ведущих мировых брендов компьютерной техники</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-light rounded">
+                        <i class="fas fa-award fa-3x text-warning mb-3"></i>
+                        <h4>Выбор покупателей</h4>
+                        <p>5 лет подряд по результатам независимого опроса</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h4 class="text-center mb-4">Наши партнеры</h4>
+                <div class="row g-4 align-items-center justify-content-center">
+                    <div class="col-6 col-md-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Asus_logo_%282017-present%29.svg/2560px-Asus_logo_%282017-present%29.svg.png"
+                            alt="ASUS" class="img-fluid grayscale">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/MSI_logo.svg/2560px-MSI_logo.svg.png"
+                            alt="MSI" class="img-fluid grayscale">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logitech_Logo_2015-present.svg/2560px-Logitech_Logo_2015-present.svg.png"
+                            alt="Logitech" class="img-fluid grayscale">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png"
+                            alt="Samsung" class="img-fluid grayscale">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/HyperX_Logo.svg/2560px-HyperX_Logo.svg.png"
+                            alt="HyperX" class="img-fluid grayscale">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Готовы сделать заказ или нужна консультация?</h2>
+            <p class="lead mb-5">Наши специалисты помогут подобрать оптимальное решение под ваши задачи и бюджет</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="tel:+79048848016" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-phone me-2"></i> Позвонить нам
+                </a>
+                <a href="#" class="btn btn-outline-light btn-lg px-4">
+                    <i class="fas fa-comment me-2"></i> Написать в чат
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика
+                            конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для плавного появления элементов при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.team-card, .value-card, .timeline-item');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.team-card, .value-card, .timeline-item');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Добавляем класс при скролле для навигации
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('navbar-scrolled');
+                } else {
+                    nav.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

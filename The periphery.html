@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Периферия - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/bit-city-logo.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="VideoCards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="RAM.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item active" href="Periphery.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Promotions.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="Cart.html" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="Account.html" class="user-icon me-3">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="breadcrumb-section py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Периферия</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header py-4 bg-light">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">Периферийные устройства</h1>
+            <p class="lead text-muted">Широкий выбор клавиатур, мышей, мониторов и других аксессуаров для комфортной
+                работы и игр</p>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Сайдбар с фильтрами -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-primary-bit text-white">
+                            <h5 class="mb-0">Фильтры</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6 class="mb-3">Категории</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="keyboardsCheck" checked>
+                                    <label class="form-check-label" for="keyboardsCheck">Клавиатуры</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="miceCheck" checked>
+                                    <label class="form-check-label" for="miceCheck">Мыши</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="monitorsCheck" checked>
+                                    <label class="form-check-label" for="monitorsCheck">Мониторы</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="headphonesCheck" checked>
+                                    <label class="form-check-label" for="headphonesCheck">Наушники</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="otherCheck">
+                                    <label class="form-check-label" for="otherCheck">Другая периферия</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Цена, ₽</h6>
+                                <div class="row g-2 mb-3">
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="От" value="0">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="До" value="50000">
+                                    </div>
+                                </div>
+                                <div class="range-slider">
+                                    <input type="range" class="form-range" min="0" max="100000" step="1000"
+                                        id="priceRange">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Бренды</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="logitechCheck" checked>
+                                    <label class="form-check-label" for="logitechCheck">Logitech</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="razerCheck" checked>
+                                    <label class="form-check-label" for="razerCheck">Razer</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="asusCheck" checked>
+                                    <label class="form-check-label" for="asusCheck">ASUS</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="hyperxCheck">
+                                    <label class="form-check-label" for="hyperxCheck">HyperX</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="steelseriesCheck">
+                                    <label class="form-check-label" for="steelseriesCheck">SteelSeries</label>
+                                </div>
+                                <a href="#" class="small" data-bs-toggle="collapse" data-bs-target="#moreBrands">Еще
+                                    бренды</a>
+                                <div class="collapse" id="moreBrands">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="corsairCheck">
+                                        <label class="form-check-label" for="corsairCheck">Corsair</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="msiCheck">
+                                        <label class="form-check-label" for="msiCheck">MSI</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="mb-3">Тип подключения</h6>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="wirelessCheck">
+                                    <label class="form-check-label" for="wirelessCheck">Беспроводные</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="wiredCheck" checked>
+                                    <label class="form-check-label" for="wiredCheck">Проводные</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="bothCheck" checked>
+                                    <label class="form-check-label" for="bothCheck">Оба варианта</label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary-bit w-100">Применить фильтры</button>
+                            <button class="btn btn-outline-secondary w-100 mt-2">Сбросить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Основной контент с товарами -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex align-items-center">
+                            <span class="me-3">Сортировка:</span>
+                            <select class="form-select form-select-sm" style="width: auto;">
+                                <option selected>По популярности</option>
+                                <option>По возрастанию цены</option>
+                                <option>По убыванию цены</option>
+                                <option>По новизне</option>
+                                <option>По рейтингу</option>
+                            </select>
+                        </div>
+                        <div class="text-muted">Найдено 127 товаров</div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Карточка товара 1 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/keyboard1.jpg" class="card-img-top"
+                                        alt="Игровая клавиатура">
+                                    <div class="discount-badge">-15%</div>
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-secondary">Беспроводная</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Игровая клавиатура Razer BlackWidow V3</h5>
+                                    <p class="card-text text-muted small">Механическая, RGB подсветка, переключатели
+                                        Razer Green</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted small me-2">12 990
+                                                ₽</span>
+                                            <span class="fw-bold text-primary-bit">10 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 2 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/mouse1.jpg" class="card-img-top" alt="Игровая мышь">
+                                    <div class="discount-badge">-20%</div>
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-secondary">Беспроводная</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Игровая мышь Logitech G Pro X Superlight</h5>
+                                    <p class="card-text text-muted small">63г, 25K DPI, Hero 25K сенсор, 70ч работы</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted small me-2">14 990
+                                                ₽</span>
+                                            <span class="fw-bold text-primary-bit">11 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 3 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/headphones1.jpg" class="card-img-top"
+                                        alt="Игровые наушники">
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-primary">Проводные</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Наушники HyperX Cloud II</h5>
+                                    <p class="card-text text-muted small">7.1 виртуальный звук, микрофон с
+                                        шумоподавлением</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">9 490 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 4 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/monitor1.jpg" class="card-img-top" alt="Игровой монитор">
+                                    <div class="discount-badge">-10%</div>
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Монитор ASUS TUF Gaming VG27AQ</h5>
+                                    <p class="card-text text-muted small">27", QHD, 165Hz, IPS, G-Sync Compatible</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted small me-2">39 990
+                                                ₽</span>
+                                            <span class="fw-bold text-primary-bit">35 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 5 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/keyboard2.jpg" class="card-img-top"
+                                        alt="Механическая клавиатура">
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-primary">Проводные</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Клавиатура Corsair K70 RGB MK.2</h5>
+                                    <p class="card-text text-muted small">Механическая, Cherry MX Red, алюминиевая рамка
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">14 490 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 6 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/mouse2.jpg" class="card-img-top" alt="Игровая мышь">
+                                    <div class="discount-badge">-25%</div>
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-primary">Проводные</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Мышь Razer DeathAdder V2</h5>
+                                    <p class="card-text text-muted small">20K DPI, 8 программируемых кнопок, 89г</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted small me-2">7 990
+                                                ₽</span>
+                                            <span class="fw-bold text-primary-bit">5 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 7 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/headphones2.jpg" class="card-img-top"
+                                        alt="Беспроводные наушники">
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-secondary">Беспроводные</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Наушники SteelSeries Arctis 7</h5>
+                                    <p class="card-text text-muted small">2.4GHz беспроводные, 24ч работы, Discord
+                                        сертификация</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">15 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 8 -->
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="card product-card h-100">
+                                <div class="position-relative">
+                                    <img src="images/periphery/monitor2.jpg" class="card-img-top" alt="Игровой монитор">
+                                    <div class="discount-badge">-18%</div>
+                                    <button class="btn-wishlist">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <h5 class="card-title">Монитор AOC 24G2U</h5>
+                                    <p class="card-text text-muted small">24", Full HD, 144Hz, IPS, AMD FreeSync</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted small me-2">21 990
+                                                ₽</span>
+                                            <span class="fw-bold text-primary-bit">17 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Назад</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Вперед</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные категории -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Популярные категории</h2>
+                <p class="text-muted">Выберите интересующую вас категорию периферии</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="Keyboards.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <h5>Клавиатуры</h5>
+                            <p class="text-center text-muted">Механические, мембранные, игровые</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="Mice.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-mouse"></i>
+                            </div>
+                            <h5>Мыши</h5>
+                            <p class="text-center text-muted">Игровые, офисные, беспроводные</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="Monitors.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h5>Мониторы</h5>
+                            <p class="text-center text-muted">Игровые, профессиональные, офисные</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="Headphones.html" class="text-decoration-none">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <h5>Наушники</h5>
+                            <p class="text-center text-muted">Игровые, студийные, беспроводные</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация элементов с анимацией
+        document.addEventListener('DOMContentLoaded', function () {
+            // Анимация карточек товаров
+            const animateCards = function () {
+                const cards = document.querySelectorAll('.product-card, .category-card');
+
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100 * index);
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card, .category-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации
+            animateCards();
+
+            // Обработчик для кнопки "в избранное"
+            document.querySelectorAll('.btn-wishlist').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas', 'text-danger');
+                    } else {
+                        icon.classList.remove('fas', 'text-danger');
+                        icon.classList.add('far');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

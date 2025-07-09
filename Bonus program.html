@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бонусная программа | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bonus-hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .tier-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .tier-header {
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .silver .tier-header {
+            background-color: #c0c0c0;
+        }
+
+        .gold .tier-header {
+            background-color: #ffd700;
+        }
+
+        .platinum .tier-header {
+            background: linear-gradient(135deg, #e5e4e2, #c0c0c0);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-icon {
+            margin-right: 10px;
+            color: #0d6efd;
+        }
+
+        .how-it-works-step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            cursor: pointer;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            background-color: white;
+            border-radius: 0 0 5px 5px;
+            display: none;
+        }
+
+        .faq-question.collapsed+.faq-answer {
+            display: none;
+        }
+
+        .faq-question:not(.collapsed)+.faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навигация (такая же как на главной) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="#">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="#">Мыши</a></li>
+                            <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="#" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="#" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция для бонусной программы -->
+    <section class="bonus-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Бонусная программа Бит-Сити</h1>
+                    <p class="lead mb-4">Копите бонусы за покупки и получайте скидки на следующие заказы. Чем больше
+                        покупаете - тем больше экономите!</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#register" class="btn btn-light btn-lg px-4">Зарегистрироваться</a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4">Как это работает</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества программы -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Почему стоит участвовать?</h2>
+                <p class="text-muted">Наши клиенты получают эксклюзивные преимущества</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-coins fa-3x text-primary-bit"></i>
+                        </div>
+                        <h4>Кэшбэк бонусами</h4>
+                        <p>Получайте до 10% от суммы покупки бонусами на счет, которыми можно оплатить до 50% следующего
+                            заказа.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-gift fa-3x text-primary-bit"></i>
+                        </div>
+                        <h4>Эксклюзивные акции</h4>
+                        <p>Доступ к специальным предложениям и закрытым распродажам только для участников программы.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-birthday-cake fa-3x text-primary-bit"></i>
+                        </div>
+                        <h4>Подарки на день рождения</h4>
+                        <p>Специальный бонус в ваш день рождения и скидка на весь ассортимент в течение недели.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Уровни программы -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Уровни программы</h2>
+                <p class="text-muted">Чем выше уровень - тем больше преимуществ</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tier-card silver">
+                        <div class="tier-header">
+                            <h3 class="mb-0">Silver</h3>
+                            <p class="mb-0">От 10 000 ₽ покупок</p>
+                        </div>
+                        <div class="card-body bg-white">
+                            <ul class="list-unstyled">
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> 5% бонусов от
+                                    суммы покупки</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Доступ к
+                                    базовым акциям</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Бесплатная
+                                    доставка от 5000 ₽</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Приоритетная
+                                    поддержка</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tier-card gold">
+                        <div class="tier-header">
+                            <h3 class="mb-0">Gold</h3>
+                            <p class="mb-0">От 50 000 ₽ покупок</p>
+                        </div>
+                        <div class="card-body bg-white">
+                            <ul class="list-unstyled">
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> 7% бонусов от
+                                    суммы покупки</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Доступ к
+                                    эксклюзивным акциям</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Бесплатная
+                                    доставка от 3000 ₽</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Персональный
+                                    менеджер</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Приглашения на
+                                    мероприятия</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tier-card platinum">
+                        <div class="tier-header">
+                            <h3 class="mb-0">Platinum</h3>
+                            <p class="mb-0">От 150 000 ₽ покупок</p>
+                        </div>
+                        <div class="card-body bg-white">
+                            <ul class="list-unstyled">
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> 10% бонусов от
+                                    суммы покупки</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Доступ ко всем
+                                    акциям</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Бесплатная
+                                    доставка всегда</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> VIP-поддержка
+                                    24/7</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Тестирование
+                                    новых товаров</li>
+                                <li class="benefit-item"><i class="fas fa-check-circle benefit-icon"></i> Персональные
+                                    предложения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Как это работает</h2>
+                <p class="text-muted">Всего 3 простых шага к бонусам</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="how-it-works-step">
+                        <div class="step-number">1</div>
+                        <h4>Регистрация</h4>
+                        <p>Создайте аккаунт на нашем сайте или в мобильном приложении.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-it-works-step">
+                        <div class="step-number">2</div>
+                        <h4>Покупайте</h4>
+                        <p>Совершайте покупки в нашем магазине, онлайн или оффлайн.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="how-it-works-step">
+                        <div class="step-number">3</div>
+                        <h4>Получайте бонусы</h4>
+                        <p>Бонусы автоматически начисляются на ваш счет после оплаты заказа.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <div class="alert alert-info d-inline-block">
+                    <p class="mb-0"><strong>1 бонус = 1 рубль.</strong> Оплачивайте до 50% стоимости следующего заказа
+                        бонусами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма регистрации -->
+    <section id="register" class="py-5 bg-primary-bit text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">Присоединяйтесь к программе</h2>
+                        <p>Заполните форму и начните копить бонусы уже сегодня</p>
+                    </div>
+
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Фамилия</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="agree" required>
+                                <label class="form-check-label" for="agree">
+                                    Я согласен с <a href="#" class="text-white">условиями программы</a> и <a href="#"
+                                        class="text-white">политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-accent btn-lg px-5">Зарегистрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Частые вопросы</h2>
+                <p class="text-muted">Ответы на популярные вопросы о бонусной программе</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1"
+                            aria-expanded="false">
+                            <span>Как начисляются бонусы?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="faq1" class="faq-answer">
+                            <p>Бонусы начисляются в размере от 5% до 10% от суммы каждой покупки в зависимости от вашего
+                                уровня в программе. Бонусы зачисляются на ваш счет после полной оплаты заказа и могут
+                                быть использованы для оплаты следующих покупок.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2"
+                            aria-expanded="false">
+                            <span>Как долго действуют бонусы?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="faq2" class="faq-answer">
+                            <p>Бонусы действительны в течение 12 месяцев с момента начисления. По истечении этого срока
+                                неиспользованные бонусы сгорают.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3"
+                            aria-expanded="false">
+                            <span>Можно ли объединять бонусы с другими скидками?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="faq3" class="faq-answer">
+                            <p>Да, бонусами можно оплатить до 50% стоимости заказа, даже если на товар уже действует
+                                скидка или акция. Однако бонусами нельзя оплатить доставку и некоторые специальные
+                                предложения.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4"
+                            aria-expanded="false">
+                            <span>Как проверить баланс бонусов?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="faq4" class="faq-answer">
+                            <p>Баланс бонусов отображается в вашем личном кабинете на сайте и в мобильном приложении.
+                                Также вы можете узнать баланс, обратившись в нашу службу поддержки.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5"
+                            aria-expanded="false">
+                            <span>Как повысить уровень в программе?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="faq5" class="faq-answer">
+                            <p>Уровень повышается автоматически при достижении определенной суммы покупок за последние
+                                12 месяцев. Silver - от 10 000 ₽, Gold - от 50 000 ₽, Platinum - от 150 000 ₽.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (такой же как на главной) -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#" class="text-white-50">Доставка и оплата</a>
+                        <a href="#" class="text-white-50">Гарантия и возврат</a>
+                        <a href="#" class="text-white-50">FAQ</a>
+                        <a href="#" class="text-white">Бонусная программа</a>
+                        <a href="#" class="text-white-50">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#" class="text-white-50">О нас</a>
+                        <a href="#" class="text-white-50">Новости</a>
+                        <a href="#" class="text-white-50">Вакансии</a>
+                        <a href="#" class="text-white-50">Партнеры</a>
+                        <a href="#" class="text-white-50">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                                <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none me-3 text-white-50">Политика конфиденциальности</a>
+                    <a href="#" class="text-decoration-none text-white-50">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function () {
+                const icon = this.querySelector('i');
+                if (this.getAttribute('aria-expanded') === 'true') {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Плавное появление элементов при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.tier-card, .how-it-works-step, .faq-item');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const animatedElements = document.querySelectorAll('.tier-card, .how-it-works-step, .faq-item');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

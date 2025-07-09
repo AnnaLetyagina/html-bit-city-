@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .delivery-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .payment-method-card {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .payment-method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .delivery-step {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .delivery-step:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: #0d6efd;
+            border-radius: 50%;
+        }
+
+        .delivery-step:after {
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 25px;
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: #e9ecef;
+        }
+
+        .delivery-step:last-child:after {
+            display: none;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            cursor: pointer;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #e9ecef;
+        }
+
+        .faq-answer {
+            padding: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images\bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="#">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="#">Мыши</a></li>
+                            <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="delivery.html">Доставка и оплата</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="#" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="#" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="delivery-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Доставка и оплата</h1>
+            <p class="lead">Удобные способы получения и оплаты ваших заказов</p>
+        </div>
+    </section>
+
+    <!-- Способы доставки -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Способы доставки</h2>
+                <p class="text-muted">Выберите наиболее удобный для вас вариант</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-truck fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Курьерская доставка</h4>
+                            <p class="card-text">Быстрая доставка по городу в удобное для вас время. Курьер свяжется с
+                                вами перед выездом.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark">1-2 дня</span>
+                                <span class="badge bg-light text-dark">от 300 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-store fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Самовывоз</h4>
+                            <p class="card-text">Заберите заказ из нашего магазина в центре города. Готовность заказа -
+                                от 1 часа.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark">от 1 часа</span>
+                                <span class="badge bg-light text-dark">бесплатно</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="fas fa-box fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title">Доставка по России</h4>
+                            <p class="card-text">Отправка в любой город России через проверенных транспортных компаний.
+                                Сроки зависят от региона.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark">2-7 дней</span>
+                                <span class="badge bg-light text-dark">от 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как работает доставка -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Как работает наша доставка</h2>
+                    <p>Мы стремимся сделать процесс получения заказа максимально удобным и прозрачным для наших
+                        клиентов.</p>
+
+                    <div class="delivery-step">
+                        <h5>1. Оформление заказа</h5>
+                        <p>После оформления заказа на сайте наш менеджер свяжется с вами для подтверждения деталей в
+                            течение 15 минут (в рабочее время).</p>
+                    </div>
+
+                    <div class="delivery-step">
+                        <h5>2. Подготовка к отправке</h5>
+                        <p>Мы тщательно проверяем каждый товар перед отправкой и упаковываем его с особой заботой, чтобы
+                            он дошел до вас в идеальном состоянии.</p>
+                    </div>
+
+                    <div class="delivery-step">
+                        <h5>3. Доставка</h5>
+                        <p>Курьер или транспортная компания доставят ваш заказ по указанному адресу. Вы получите
+                            уведомление о статусе доставки.</p>
+                    </div>
+
+                    <div class="delivery-step">
+                        <h5>4. Получение</h5>
+                        <p>При получении вы можете проверить товар и только после этого оплатить заказ (при выборе
+                            наложенного платежа).</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <h4 class="mb-4">Зоны и сроки доставки</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Регион</th>
+                                        <th>Срок</th>
+                                        <th>Стоимость</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Белоярский (в пределах города)</td>
+                                        <td>1-2 дня</td>
+                                        <td>300 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пригород (до 30 км)</td>
+                                        <td>1-3 дня</td>
+                                        <td>500 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ХМАО - Югра</td>
+                                        <td>2-3 дня</td>
+                                        <td>800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Другие регионы России</td>
+                                        <td>3-7 дней</td>
+                                        <td>от 1000 ₽</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="alert alert-info mt-4">
+                            <i class="fas fa-info-circle me-2"></i> При заказе от 50 000 ₽ - доставка по городу
+                            бесплатно!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Способы оплаты -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Способы оплаты</h2>
+                <p class="text-muted">Выберите удобный для вас вариант оплаты</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fab fa-cc-mir fa-3x text-danger"></i>
+                            </div>
+                            <h5 class="card-title">Картой МИР</h5>
+                            <p class="card-text text-muted">Оплата онлайн при оформлении заказа или при получении через
+                                мобильный терминал.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-money-bill-wave fa-3x text-success"></i>
+                            </div>
+                            <h5 class="card-title">Наличными</h5>
+                            <p class="card-text text-muted">Оплата наличными курьеру при получении или в пункте
+                                самовывоза.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-credit-card fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Рассрочка</h5>
+                            <p class="card-text text-muted">Беспроцентная рассрочка на 6-12 месяцев от наших
+                                банков-партнеров.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm payment-method-card">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-mobile-alt fa-3x text-info"></i>
+                            </div>
+                            <h5 class="card-title">СБП</h5>
+                            <p class="card-text text-muted">Оплата через Систему Быстрых Платежей по номеру телефона.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Часто задаваемые вопросы</h2>
+                <p class="text-muted">Ответы на популярные вопросы о доставке и оплате</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-question-circle me-2 text-primary"></i> Как узнать статус моего заказа?
+                        </div>
+                        <div class="faq-answer">
+                            После оформления заказа вы получите письмо с номером заказа и ссылкой для отслеживания.
+                            Также вы можете позвонить нам по телефону +7 (904) 884-80-16, и мы сообщим актуальный статус
+                            вашего заказа.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-question-circle me-2 text-primary"></i> Можно ли изменить адрес доставки
+                            после оформления заказа?
+                        </div>
+                        <div class="faq-answer">
+                            Да, вы можете изменить адрес доставки, пока заказ не передан в службу доставки. Позвоните
+                            нам как можно скорее, и мы внесем изменения.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-question-circle me-2 text-primary"></i> Какие документы я получу с заказом?
+                        </div>
+                        <div class="faq-answer">
+                            Вместе с заказом вы получите товарный чек, гарантийный талон (если предусмотрен
+                            производителем) и инструкцию по эксплуатации. Для юридических лиц мы предоставляем полный
+                            пакет бухгалтерских документов.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-question-circle me-2 text-primary"></i> Что делать, если товар не
+                            соответствует описанию?
+                        </div>
+                        <div class="faq-answer">
+                            Если вы получили товар, который не соответствует описанию на сайте, свяжитесь с нами в
+                            течение 24 часов с момента получения. Мы организуем замену товара или возврат денежных
+                            средств.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-question-circle me-2 text-primary"></i> Есть ли у вас срочная доставка?
+                        </div>
+                        <div class="faq-answer">
+                            Да, мы предлагаем услугу срочной доставки в пределах города в течение 3 часов с момента
+                            оформления заказа. Стоимость такой доставки - 1000 ₽. Услуга доступна только для товаров,
+                            имеющихся в наличии.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Остались вопросы?</h2>
+                    <p class="lead">Наша служба поддержки всегда готова помочь вам!</p>
+                    <p>Если у вас есть вопросы по доставке, оплате или другим аспектам работы нашего магазина, свяжитесь
+                        с нами удобным для вас способом.</p>
+
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone-alt me-3 text-primary fa-lg"></i>
+                            <div>
+                                <h5 class="mb-0">Телефон</h5>
+                                <p class="mb-0">+7 (904) 884-80-16</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-3 text-primary fa-lg"></i>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0">bit-city@mail.ru</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3 text-primary fa-lg"></i>
+                            <div>
+                                <h5 class="mb-0">Адрес магазина</h5>
+                                <p class="mb-0">г. Белоярский, 1 мкр., 11 дом, 1 кв.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Напишите нам</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Сообщение</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-bit w-100">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="delivery.html" class="active">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="index.html#about">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский, 1 мкр., 11 дом, 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                                <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Функция для показа/скрытия ответов в FAQ
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+
+            // Скрываем все ответы
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.style.display = 'none';
+            });
+
+            // Показываем текущий ответ, если он был скрыт
+            if (!isVisible) {
+                answer.style.display = 'block';
+            }
+        }
+
+        // Инициализация показа первого ответа
+        document.addEventListener('DOMContentLoaded', function () {
+            const firstAnswer = document.querySelector('.faq-answer');
+            if (firstAnswer) {
+                firstAnswer.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

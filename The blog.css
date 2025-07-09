@@ -1,0 +1,94 @@
+.blog-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: white;
+}
+
+.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tag-hardware {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.tag-gaming {
+    background-color: #f3e5f5;
+    color: #8e24aa;
+}
+
+.tag-software {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.tag-news {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-link {
+    color: #0d6efd;
+}
+
+.sidebar-card {
+    position: sticky;
+    top: 20px;
+}
+
+.popular-post {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.popular-post-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.popular-post-title {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.popular-post-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}

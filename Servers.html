@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Серверное оборудование | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Servers.css">
+
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item active" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Серверы</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Герой секция -->
+    <section class="container mt-4">
+        <div class="server-hero">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Серверное оборудование</h1>
+                    <p class="lead mb-4">Профессиональные решения для бизнеса любого масштаба. Надежность,
+                        производительность и масштабируемость.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#server-solutions" class="btn btn-light btn-lg px-4">Готовые решения</a>
+                        <a href="#server-configurator" class="btn btn-outline-light btn-lg px-4">Конфигуратор</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
+                        alt="Серверное оборудование" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Особенности серверов -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Почему выбирают наши серверные решения</h2>
+                <p class="text-muted">Надежность и производительность для вашего бизнеса</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="server-feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Надежность</h5>
+                        <p class="text-muted">Серверы с компонентами enterprise-класса и отказоустойчивой архитектурой
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="server-feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h5>Производительность</h5>
+                        <p class="text-muted">Мощные процессоры и быстрая память для обработки критичных нагрузок</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="server-feature-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h5>Масштабируемость</h5>
+                        <p class="text-muted">Возможность наращивания ресурсов по мере роста вашего бизнеса</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="text-center p-3">
+                        <div class="server-feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5>Поддержка 24/7</h5>
+                        <p class="text-muted">Круглосуточная техническая поддержка и сервисное обслуживание</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные серверы -->
+    <section class="py-5" id="server-solutions">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="fw-bold">Популярные серверные решения</h2>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="serverFilterDropdown"
+                        data-bs-toggle="dropdown">
+                        Все категории
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Все серверы</a></li>
+                        <li><a class="dropdown-item" href="#">Стойки</a></li>
+                        <li><a class="dropdown-item" href="#">Блейд-серверы</a></li>
+                        <li><a class="dropdown-item" href="#">Башенные</a></li>
+                        <li><a class="dropdown-item" href="#">Хранилища данных</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <div class="position-relative">
+                            <img src="images\i (4).webp" class="card-img-top" alt="Сервер Dell PowerEdge">
+                            <span class="badge bg-danger server-badge">Хит продаж</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dell PowerEdge R750</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>2x Xeon Silver 4310, 64GB RAM, 4x 480GB
+                                        SSD</small></p>
+                                <p class="card-text text-muted mb-1"><small>2U, 10x 2.5", RAID контроллер</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit fs-4">489 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <div class="position-relative">
+                            <img src="images\server_hp_dl380_gen10_8x2_5.png" class="card-img-top"
+                                alt="Сервер HP ProLiant">
+                            <span class="badge bg-success server-badge">В наличии</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">HPE ProLiant DL380 Gen10</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>2x Xeon Gold 5318Y, 128GB RAM, 8x 1.2TB
+                                        SAS</small></p>
+                                <p class="card-text text-muted mb-1"><small>2U, 12x LFF, HW RAID</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit fs-4">689 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <div class="position-relative">
+                            <img src="images\1382347.png" class="card-img-top" alt="Сервер Lenovo ThinkSystem">
+                            <span class="badge bg-warning text-dark server-badge">Спеццена</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lenovo ThinkSystem SR650</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>2x Xeon Gold 6326, 96GB RAM, 4x 960GB
+                                        SSD</small></p>
+                                <p class="card-text text-muted mb-1"><small>2U, 8x 2.5", RAID 940-8i</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-decoration-line-through text-muted me-2">759 990 ₽</span>
+                                    <span class="fw-bold text-primary-bit fs-4">699 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <img src="images\i (5).webp" class="card-img-top" alt="Сервер Fujitsu Primergy">
+                        <div class="card-body">
+                            <h5 class="card-title">Fujitsu Primergy RX2540 M6</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>2x Xeon Silver 4314, 64GB RAM, 4x 1.8TB
+                                        SAS</small></p>
+                                <p class="card-text text-muted mb-1"><small>2U, 12x 3.5", HW RAID</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit fs-4">539 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <div class="position-relative">
+                            <img src="images\00eecd88-aeda-4578-ab1d-52e3d405f7b7.png" class="card-img-top"
+                                alt="Сервер Supermicro">
+                            <span class="badge bg-info server-badge">Новинка</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Supermicro SYS-220BT-HNR</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>2x Xeon Platinum 8380, 256GB RAM, 8x 3.84TB
+                                        SSD</small></p>
+                                <p class="card-text text-muted mb-1"><small>2U, 12x 3.5", HW RAID</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit fs-4">1 289 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card server-card h-100">
+                        <img src="images\i (6).webp" class="card-img-top" alt="Сервер IBM Power">
+                        <div class="card-body">
+                            <h5 class="card-title">IBM Power System S922</h5>
+                            <div class="server-specs mb-3">
+                                <p class="card-text text-muted mb-1"><small>POWER9 12C, 64GB RAM, 4x 1.8TB SAS</small>
+                                </p>
+                                <p class="card-text text-muted mb-1"><small>4U, 12x 2.5", HW RAID</small></p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold text-primary-bit fs-4">899 990 ₽</span>
+                                </div>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-primary-bit w-100">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-outline-primary-bit btn-lg">Показать все серверы (24)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Решения для бизнеса -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Готовые решения для вашего бизнеса</h2>
+                <p class="text-muted">Оптимальные конфигурации под различные задачи</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="solution-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-database server-feature-icon"></i>
+                        </div>
+                        <h4 class="text-center">Сервер баз данных</h4>
+                        <p class="text-muted">Оптимальная конфигурация для работы с СУБД: высокая производительность
+                            дисковой подсистемы, большой объем RAM.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> Процессоры: 2x Xeon Silver</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Память: 128GB DDR4</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Диски: 6x 1.8TB SAS SSD</li>
+                            <li><i class="fas fa-check text-success me-2"></i> RAID: HW контроллер</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="solution-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-cloud server-feature-icon"></i>
+                        </div>
+                        <h4 class="text-center">Виртуализация</h4>
+                        <p class="text-muted">Мощные серверы для создания виртуальных сред с высокой плотностью
+                            размещения виртуальных машин.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> Процессоры: 2x Xeon Gold</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Память: 256GB DDR4</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Диски: 8x 960GB SSD</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Сетевые: 10Gbe x2</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="solution-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-file-archive server-feature-icon"></i>
+                        </div>
+                        <h4 class="text-center">Хранилище данных</h4>
+                        <p class="text-muted">Серверы с большим объемом дискового пространства для хранения и резервного
+                            копирования данных.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> Процессоры: 2x Xeon Silver</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Память: 64GB DDR4</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Диски: 12x 8TB HDD</li>
+                            <li><i class="fas fa-check text-success me-2"></i> RAID: HW контроллер</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="solution-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-globe server-feature-icon"></i>
+                        </div>
+                        <h4 class="text-center">Веб-сервер</h4>
+                        <p class="text-muted">Оптимальные конфигурации для хостинга веб-приложений с высокой
+                            доступностью.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i> Процессоры: 2x Xeon Bronze</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Память: 32GB DDR4</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Диски: 2x 480GB SSD</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Сетевые: 1Gbe x4</li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary-bit">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Конфигуратор серверов -->
+    <section class="py-5" id="server-configurator">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Конфигуратор серверов</h2>
+                    <p class="lead">Соберите сервер под свои задачи</p>
+                    <p>Выберите компоненты и получите оптимальную конфигурацию для ваших потребностей. Наши специалисты
+                        помогут с выбором и предложат лучшие решения.</p>
+
+                    <div class="accordion mt-4" id="configuratorAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    Корпус и форм-фактор
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#configuratorAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="formFactor" id="tower"
+                                            checked>
+                                        <label class="form-check-label" for="tower">
+                                            Башенный (Tower)
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="formFactor" id="1u">
+                                        <label class="form-check-label" for="1u">
+                                            Стойка 1U
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="formFactor" id="2u">
+                                        <label class="form-check-label" for="2u">
+                                            Стойка 2U
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="formFactor" id="4u">
+                                        <label class="form-check-label" for="4u">
+                                            Стойка 4U
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    Процессор
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#configuratorAccordion">
+                                <div class="accordion-body">
+                                    <select class="form-select">
+                                        <option selected>Выберите процессор</option>
+                                        <option>Intel Xeon Bronze 3204 (6C/6T, 1.9GHz)</option>
+                                        <option>Intel Xeon Silver 4210 (10C/20T, 2.2GHz)</option>
+                                        <option>Intel Xeon Gold 5218 (16C/32T, 2.3GHz)</option>
+                                        <option>Intel Xeon Platinum 8259CL (24C/48T, 2.5GHz)</option>
+                                        <option>AMD EPYC 7302 (16C/32T, 3.0GHz)</option>
+                                        <option>AMD EPYC 7452 (32C/64T, 2.35GHz)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
+                                    Оперативная память
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#configuratorAccordion">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Объем памяти (GB)</label>
+                                        <input type="range" class="form-range" min="16" max="512" step="16" value="64"
+                                            id="ramRange">
+                                        <div class="d-flex justify-content-between">
+                                            <small>16GB</small>
+                                            <small>512GB</small>
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <span class="badge bg-primary-bit">Выбрано: 64GB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour">
+                                    Дисковая подсистема
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#configuratorAccordion">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Тип дисков</label>
+                                        <select class="form-select mb-3">
+                                            <option selected>Выберите тип дисков</option>
+                                            <option>SATA HDD (7.2K RPM)</option>
+                                            <option>SAS HDD (10K RPM)</option>
+                                            <option>SAS HDD (15K RPM)</option>
+                                            <option>SATA SSD</option>
+                                            <option>SAS SSD</option>
+                                            <option>NVMe SSD</option>
+                                        </select>
+
+                                        <label class="form-label">Количество дисков</label>
+                                        <select class="form-select mb-3">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option selected>4</option>
+                                            <option>6</option>
+                                            <option>8</option>
+                                            <option>12</option>
+                                            <option>24</option>
+                                        </select>
+
+                                        <label class="form-label">Объем дисков</label>
+                                        <select class="form-select">
+                                            <option>240GB</option>
+                                            <option>480GB</option>
+                                            <option selected>960GB</option>
+                                            <option>1.8TB</option>
+                                            <option>3.8TB</option>
+                                            <option>7.6TB</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="btn btn-primary-bit btn-lg">Подобрать сервер</button>
+                        <button class="btn btn-outline-secondary btn-lg ms-2">Сбросить</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card border-primary-bit">
+                        <div class="card-header bg-primary-bit text-white">
+                            <h5 class="mb-0">Ваша конфигурация</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Корпус:</span>
+                                <span class="fw-bold">Башенный (Tower)</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Процессор:</span>
+                                <span class="fw-bold">Не выбран</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Память:</span>
+                                <span class="fw-bold">64GB DDR4 ECC</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Диски:</span>
+                                <span class="fw-bold">Не выбраны</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>RAID:</span>
+                                <span class="fw-bold">Базовый (Software)</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold">Итого:</span>
+                                <span class="fw-bold fs-4 text-primary-bit">от 189 990 ₽</span>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary-bit w-100">Отправить заявку</button>
+                                <button class="btn btn-outline-primary-bit w-100 mt-2">Проконсультироваться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сервисные услуги -->
+    <section class="py-5 bg-primary-bit text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Сервисные услуги для серверов</h2>
+                <p>Профессиональная поддержка и обслуживание вашего оборудования</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-tools server-feature-icon"></i>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Установка и настройка</h4>
+                            <p class="card-text">Профессиональная установка серверного оборудования и настройка под ваши
+                                задачи</p>
+                            <div class="my-3">
+                                <span class="fw-bold fs-4">от 15 000 ₽</span>
+                            </div>
+                            <a href="#" class="btn btn-accent">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-shield-alt server-feature-icon"></i>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Гарантийное обслуживание</h4>
+                            <p class="card-text">Расширенная гарантия и сервисное обслуживание вашего оборудования</p>
+                            <div class="my-3">
+                                <span class="fw-bold fs-4">от 10% стоимости/год</span>
+                            </div>
+                            <a href="#" class="btn btn-accent">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-headset server-feature-icon"></i>
+                            </div>
+                            <h4 class="card-title text-primary-bit">Техническая поддержка</h4>
+                            <p class="card-text">Круглосуточная техническая поддержка и удаленное администрирование</p>
+                            <div class="my-3">
+                                <span class="fw-bold fs-4">от 25 000 ₽/мес</span>
+                            </div>
+                            <a href="#" class="btn btn-accent">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Часто задаваемые вопросы</h2>
+                <p class="text-muted">Ответы на популярные вопросы о серверном оборудовании</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqOne">
+                                    Какой сервер мне нужен для моего бизнеса?
+                                </button>
+                            </h2>
+                            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Выбор сервера зависит от многих факторов: количества пользователей, типа нагрузки,
+                                    требований к отказоустойчивости. Наши специалисты помогут подобрать оптимальное
+                                    решение под ваши задачи и бюджет. Вы можете воспользоваться нашим <a
+                                        href="#server-configurator">конфигуратором серверов</a> или обратиться за
+                                    консультацией.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqTwo">
+                                    Какая гарантия предоставляется на серверное оборудование?
+                                </button>
+                            </h2>
+                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Стандартная гарантия на серверное оборудование составляет 3 года. Для некоторых
+                                    моделей и конфигураций возможно расширение гарантии до 5 лет. Также мы предлагаем
+                                    сервисные контракты с различными уровнями поддержки.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqThree">
+                                    Можно ли обновить сервер в будущем?
+                                </button>
+                            </h2>
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Большинство современных серверов имеют хороший потенциал для апгрейда. Вы можете
+                                    увеличивать объем памяти, добавлять диски, в некоторых случаях - менять процессоры.
+                                    При выборе сервера наши консультанты помогут подобрать модель с учетом возможных
+                                    будущих обновлений.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqFour">
+                                    Какие варианты оплаты доступны для серверного оборудования?
+                                </button>
+                            </h2>
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Мы предлагаем различные варианты оплаты: наличный и безналичный расчет, лизинг,
+                                    кредит и рассрочку. Для корпоративных клиентов возможны индивидуальные условия
+                                    оплаты. Сроки и условия зависят от суммы заказа и выбранного оборудования.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqFive">
+                                    Предоставляете ли вы услуги по установке и настройке серверов?
+                                </button>
+                            </h2>
+                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Да, мы оказываем полный спектр услуг по внедрению серверного оборудования: доставка,
+                                    установка, настройка, миграция данных, обучение персонала. Стоимость услуг зависит
+                                    от сложности работ и может быть рассчитана индивидуально после обсуждения ваших
+                                    требований.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Нужна консультация по серверам?</h2>
+                    <p class="lead">Наши специалисты помогут подобрать оптимальное решение для вашего бизнеса.</p>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone-alt me-3 fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Телефон</h5>
+                                <p class="mb-0">+7 (904) 884-80-16</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-3 fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0">servers@bit-city.ru</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3 fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Адрес</h5>
+                                <p class="mb-0">г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Оставить заявку</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Телефон" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="3"
+                                        placeholder="Сообщение или описание задачи"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-bit w-100">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html" class="text-white-50">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html" class="text-white-50">Гарантия и возврат</a>
+                        <a href="#faqAccordion" class="text-white-50">FAQ</a>
+                        <a href="Bonus program.html" class="text-white-50">Бонусная программа</a>
+                        <a href="Gaming.html" class="text-white-50">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html" class="text-white-50">О нас</a>
+                        <a href="News.html" class="text-white-50">Новости</a>
+                        <a href="Job openings.html" class="text-white-50">Вакансии</a>
+                        <a href="Partners.html" class="text-white-50">Партнеры</a>
+                        <a href="Contacts.html" class="text-white-50">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3">Способы оплаты</h6>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                            <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                            <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                            <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация конфигуратора серверов
+        document.addEventListener('DOMContentLoaded', function () {
+            // Обновление отображения выбранного объема RAM
+            const ramRange = document.getElementById('ramRange');
+            if (ramRange) {
+                ramRange.addEventListener('input', function () {
+                    const value = this.value;
+                    const badge = this.nextElementSibling.nextElementSibling.querySelector('.badge');
+                    badge.textContent = `Выбрано: ${value}GB`;
+                });
+            }
+
+            // Анимация для карточек серверов
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.server-card, .solution-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.server-card, .solution-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

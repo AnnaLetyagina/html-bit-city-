@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Wishlist.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="#">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="#">Мыши</a></li>
+                            <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="#" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка страницы избранного -->
+    <div class="wishlist-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="wishlist-title">Мое избранное</h1>
+                    <p class="lead mb-0">Товары, которые вы сохранили для будущих покупок</p>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="index.html" class="btn btn-outline-primary-bit">Вернуться в магазин</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Список избранного -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- Элементы избранного -->
+                <div class="wishlist-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 col-4">
+                            <img src="images/6ac7fc09-3690-4fb3-b6ac-0853546612ef.png" alt="Игровой ноутбук ASUS ROG"
+                                class="img-fluid wishlist-item-img">
+                        </div>
+                        <div class="col-md-5 col-8">
+                            <h5 class="mb-1">Игровой ноутбук ASUS ROG</h5>
+                            <p class="text-muted mb-1">RTX 4080, Intel i9-13900H, 32GB RAM, 1TB SSD</p>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-decoration-line-through text-muted me-2">149 990 ₽</span>
+                                <span class="fw-bold text-primary-bit">127 490 ₽</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-3 mt-md-0">
+                            <div class="d-flex align-items-center">
+                                <span class="badge bg-success me-2">В наличии</span>
+                                <span class="text-muted">Доставка завтра</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6 text-end mt-3 mt-md-0">
+                            <button class="btn btn-primary-bit move-to-cart">В корзину</button>
+                            <div class="mt-2">
+                                <a href="#" class="remove-item"><i class="fas fa-trash-alt me-1"></i> Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wishlist-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 col-4">
+                            <img src="images/i.webp" alt="Видеокарта NVIDIA RTX 4090"
+                                class="img-fluid wishlist-item-img">
+                        </div>
+                        <div class="col-md-5 col-8">
+                            <h5 class="mb-1">Видеокарта NVIDIA RTX 4090</h5>
+                            <p class="text-muted mb-1">24GB GDDR6X, 16384 CUDA, PCI-E 4.0</p>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-primary-bit">189 990 ₽</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-3 mt-md-0">
+                            <div class="d-flex align-items-center">
+                                <span class="badge bg-warning text-dark me-2">Ожидается</span>
+                                <span class="text-muted">Доставка через 3 дня</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6 text-end mt-3 mt-md-0">
+                            <button class="btn btn-outline-primary-bit move-to-cart" disabled>Нет в наличии</button>
+                            <div class="mt-2">
+                                <a href="#" class="remove-item"><i class="fas fa-trash-alt me-1"></i> Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wishlist-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 col-4">
+                            <img src="images/937c4cda57f011f09e01827efa7d9939.jpeg"
+                                alt="Игровая мышь Razer Viper V2 Pro" class="img-fluid wishlist-item-img">
+                        </div>
+                        <div class="col-md-5 col-8">
+                            <h5 class="mb-1">Игровая мышь Razer Viper V2 Pro</h5>
+                            <p class="text-muted mb-1">Беспроводная, 30K DPI, 80 часов работы</p>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div>
+                                <span class="text-decoration-line-through text-muted me-2">12 990 ₽</span>
+                                <span class="fw-bold text-primary-bit">10 390 ₽</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mt-3 mt-md-0">
+                            <div class="d-flex align-items-center">
+                                <span class="badge bg-success me-2">В наличии</span>
+                                <span class="text-muted">Доставка сегодня</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6 text-end mt-3 mt-md-0">
+                            <button class="btn btn-primary-bit move-to-cart">В корзину</button>
+                            <div class="mt-2">
+                                <a href="#" class="remove-item"><i class="fas fa-trash-alt me-1"></i> Удалить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пустое избранное (закомментировано, раскомментировать если нужно показать пустое состояние) -->
+                <!--
+                <div class="wishlist-empty">
+                    <div class="wishlist-empty-icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <h3 class="mb-3">Ваш список избранного пуст</h3>
+                    <p class="text-muted mb-4">Сохраняйте понравившиеся товары, нажимая на значок сердца</p>
+                    <a href="index.html" class="btn btn-primary-bit btn-lg">Перейти в каталог</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                                <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Простая анимация для плавного появления элементов при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.wishlist-item');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const items = document.querySelectorAll('.wishlist-item');
+            items.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Обработка удаления товаров из избранного
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const item = this.closest('.wishlist-item');
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(100px)';
+                    setTimeout(() => {
+                        item.remove();
+
+                        // Проверка на пустой список
+                        if (document.querySelectorAll('.wishlist-item').length === 0) {
+                            document.querySelector('.wishlist-empty').style.display = 'block';
+                        }
+                    }, 300);
+                });
+            });
+
+            // Обработка добавления в корзину
+            document.querySelectorAll('.move-to-cart').forEach(button => {
+                button.addEventListener('click', function () {
+                    if (!this.disabled) {
+                        const productName = this.closest('.wishlist-item').querySelector('h5').textContent;
+                        alert(`Товар "${productName}" добавлен в корзину`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

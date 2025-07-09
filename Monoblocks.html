@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моноблоки | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Monoblocks.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#catalogDropdown" id="catalogDropdown"
+                            role="button" data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item active" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Моноблоки</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Заголовок страницы -->
+    <div class="container page-header">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="fw-bold mb-3">Моноблоки</h1>
+                <p class="lead mb-0">Компактные компьютеры "всё в одном" для дома и офиса</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <span class="badge bg-primary fs-6">В наличии: 42 модели</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Фильтры -->
+            <div class="col-lg-3">
+                <div class="filter-panel">
+                    <h5 class="filter-title">Фильтры</h5>
+
+                    <!-- Цена -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Цена, ₽</h6>
+                        <div class="row g-2 mb-2">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="От">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="До">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary w-100">Применить</button>
+                    </div>
+
+                    <!-- Бренды -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Производитель</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="apple-aio" checked>
+                            <label class="form-check-label" for="apple-aio">Apple</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lenovo-aio">
+                            <label class="form-check-label" for="lenovo-aio">Lenovo</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="hp-aio">
+                            <label class="form-check-label" for="hp-aio">HP</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="asus-aio">
+                            <label class="form-check-label" for="asus-aio">ASUS</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dell-aio">
+                            <label class="form-check-label" for="dell-aio">Dell</label>
+                        </div>
+                    </div>
+
+                    <!-- Диагональ -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Диагональ экрана</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-21">
+                            <label class="form-check-label" for="aio-21">21-23"</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-24" checked>
+                            <label class="form-check-label" for="aio-24">24-27"</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-28">
+                            <label class="form-check-label" for="aio-28">28" и более</label>
+                        </div>
+                    </div>
+
+                    <!-- Процессор -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Процессор</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-i5">
+                            <label class="form-check-label" for="aio-i5">Intel Core i5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-i7" checked>
+                            <label class="form-check-label" for="aio-i7">Intel Core i7</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-i9">
+                            <label class="form-check-label" for="aio-i9">Intel Core i9</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-m1">
+                            <label class="form-check-label" for="aio-m1">Apple M1/M2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-ryzen">
+                            <label class="form-check-label" for="aio-ryzen">AMD Ryzen</label>
+                        </div>
+                    </div>
+
+                    <!-- Видеокарта -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-3">Видеокарта</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-integrated">
+                            <label class="form-check-label" for="aio-integrated">Интегрированная</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aio-discrete">
+                            <label class="form-check-label" for="aio-discrete">Дискретная</label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline-secondary w-100">Сбросить фильтры</button>
+                </div>
+
+                <!-- Баннер акции -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <img src="https://via.placeholder.com/300x300?text=Акция+на+моноблоки" class="card-img-top"
+                        alt="Акция">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Скидки до 20%</h5>
+                        <p class="card-text">На моноблоки Apple и HP</p>
+                        <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Список моноблоков -->
+            <div class="col-lg-9">
+                <!-- Сортировка и количество -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Сортировка:</span>
+                        <select class="form-select form-select-sm" style="width: auto;">
+                            <option selected>По популярности</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                            <option>По новизне</option>
+                            <option>По рейтингу</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="text-muted">Показано: 8 из 42 товаров</span>
+                    </div>
+                </div>
+
+                <!-- Карточки товаров -->
+                <div class="row g-4">
+                    <!-- Моноблок 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\da7fd64b-599d-4d23-aed9-04f265b3b402.png" class="card-img-top"
+                                    alt="iMac">
+                                <span class="aio-badge bg-danger">Топ продаж</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images\26.jpg" alt="Apple" class="brand-logo">
+                                    <h5 class="card-title mb-0">Apple iMac 24"</h5>
+                                </div>
+                                <span class="diagonal-badge">24 дюйма</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> Apple M1 8-core</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 8GB unified</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> Apple 7-core GPU</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 256GB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> 4.5K Retina</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">149 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Моноблок 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\ed624544-e82a-4c5c-8e28-eaabd50c0a20.png" class="card-img-top"
+                                    alt="Моноблок HP">
+                                <span class="aio-badge bg-success">Новинка</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="https://img.icons8.com/color/48/hp.png" alt="HP" class="brand-logo">
+                                    <h5 class="card-title mb-0">HP Envy 34</h5>
+                                </div>
+                                <span class="diagonal-badge">34 дюйма</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> Intel Core i7-11700</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 16GB DDR4</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> NVIDIA RTX 3060 6GB</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 1TB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> WQHD IPS</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">189 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Моноблок 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\753ab35e-f23c-423d-814a-b9ade92a4fd0.png" class="card-img-top"
+                                    alt="Моноблок Lenovo">
+                                <span class="aio-badge bg-warning text-dark">Скидка 15%</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="https://img.icons8.com/color/48/lenovo.png" alt="Lenovo"
+                                        class="brand-logo">
+                                    <h5 class="card-title mb-0">Lenovo IdeaCentre AIO 5</h5>
+                                </div>
+                                <span class="diagonal-badge">27 дюймов</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> AMD Ryzen 7 5700U</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 16GB DDR4</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> AMD Radeon Graphics</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 512GB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> QHD IPS</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <span class="text-decoration-line-through text-muted me-2">99 990 ₽</span>
+                                        <span class="h4 mb-0">84 990 ₽</span>
+                                    </div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Моноблок 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\5ddd563d-3430-42c1-93c3-ed11cb5be72b.png" class="card-img-top"
+                                    alt="Моноблок ASUS">
+                                <span class="aio-badge bg-primary">Офисный</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images\asus-logo.png" alt="ASUS" class="brand-logo">
+                                    <h5 class="card-title mb-0">ASUS Zen AIO 24</h5>
+                                </div>
+                                <span class="diagonal-badge">23.8 дюйма</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> Intel Core i5-1135G7</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 8GB DDR4</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> Intel Iris Xe</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 512GB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> FHD IPS</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">79 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Моноблок 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\975b8f5a-55f9-4272-99b1-7a61c924759a.png" class="card-img-top"
+                                    alt="Моноблок Dell">
+                                <span class="aio-badge bg-info">Для бизнеса</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="https://img.icons8.com/color/48/dell.png" alt="Dell" class="brand-logo">
+                                    <h5 class="card-title mb-0">Dell OptiPlex 7410</h5>
+                                </div>
+                                <span class="diagonal-badge">27 дюймов</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> Intel Core i7-1255U</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 16GB DDR4</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> Intel Iris Xe</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 512GB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> FHD IPS</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">109 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Моноблок 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card aio-card h-100">
+                            <div class="position-relative">
+                                <img src="images\ad1a527b-2169-45a1-9f88-1d35cc552993.png" class="card-img-top"
+                                    alt="Моноблок Apple">
+                                <span class="aio-badge bg-secondary">Премиум</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images\26.jpg" alt="Apple" class="brand-logo">
+                                    <h5 class="card-title mb-0">Apple iMac 27"</h5>
+                                </div>
+                                <span class="diagonal-badge">27 дюймов</span>
+                                <div class="aio-specs">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-microchip spec-icon"></i> Intel Core i9 10-core</li>
+                                        <li><i class="fas fa-memory spec-icon"></i> 64GB DDR4</li>
+                                        <li><i class="fas fa-gamepad spec-icon"></i> Radeon Pro 5700 XT 16GB</li>
+                                        <li><i class="fas fa-hdd spec-icon"></i> 2TB SSD</li>
+                                        <li><i class="fas fa-tv spec-icon"></i> 5K Retina</li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="h4 mb-0">299 990 ₽</div>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">В корзину</button>
+                                    <button class="btn btn-outline-secondary">К сравнению</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинация -->
+                <nav aria-label="Page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка сравнения -->
+    <button class="btn btn-primary compare-btn rounded-pill">
+        <i class="fas fa-balance-scale me-2"></i> Сравнить (1)
+    </button>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация карточек при загрузке
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.aio-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+
+</html>

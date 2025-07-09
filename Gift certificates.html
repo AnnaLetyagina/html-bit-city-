@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочные сертификаты | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-bit: #0d6efd;
+            --accent-bit: #ffc107;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #212529;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+
+        .btn-primary-bit {
+            background-color: var(--primary-bit);
+            border-color: var(--primary-bit);
+            color: white;
+        }
+
+        .btn-primary-bit:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .btn-outline-primary-bit {
+            border-color: var(--primary-bit);
+            color: var(--primary-bit);
+        }
+
+        .btn-outline-primary-bit:hover {
+            background-color: var(--primary-bit);
+            color: white;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-bit);
+            border-color: var(--accent-bit);
+            color: #212529;
+        }
+
+        .btn-accent:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d6efd 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+
+        .gift-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gift-card-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #1e3a8a 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .gift-card-body {
+            padding: 2rem;
+        }
+
+        .gift-card-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-bit);
+        }
+
+        .gift-card-features {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .gift-card-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .gift-card-features li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-bit);
+        }
+
+        .how-it-works-step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .how-it-works-icon {
+            font-size: 2.5rem;
+            color: var(--primary-bit);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .faq-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+        }
+
+        .faq-body {
+            padding: 1rem 1.5rem;
+        }
+
+        .certificate-preview {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px dashed #adb5bd;
+        }
+
+        .certificate-preview:before {
+            content: "Подарочный сертификат";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgba(13, 110, 253, 0.1);
+            white-space: nowrap;
+        }
+
+        .certificate-code {
+            font-family: 'Courier New', monospace;
+            font-size: 1.5rem;
+            letter-spacing: 0.2rem;
+            background-color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/bit-city-logo.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="#">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="#">Мыши</a></li>
+                            <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="#" class="user-icon me-3">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="#" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title mb-4">Подарочные сертификаты Бит-Сити</h1>
+                    <p class="lead mb-4">Идеальный подарок для тех, кто разбирается в технологиях. Дарите возможность
+                        выбора!</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#certificates" class="btn btn-accent btn-lg px-4">Выбрать сертификат</a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4">Как это работает</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сертификаты -->
+    <section id="certificates" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Выберите номинал сертификата</h2>
+                <p class="text-muted">Доступные варианты подарочных сертификатов</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="gift-card h-100">
+                        <div class="gift-card-header">
+                            <h4>Стандарт</h4>
+                        </div>
+                        <div class="gift-card-body text-center">
+                            <div class="gift-card-price">5 000 ₽</div>
+                            <ul class="gift-card-features text-start mt-4 mb-4">
+                                <li>Действует 12 месяцев</li>
+                                <li>Электронный или печатный формат</li>
+                                <li>Можно комбинировать с другими сертификатами</li>
+                                <li>Доставка в течение 15 минут (электронный)</li>
+                            </ul>
+                            <button class="btn btn-primary-bit w-100">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="gift-card h-100">
+                        <div class="gift-card-header">
+                            <h4>Премиум</h4>
+                        </div>
+                        <div class="gift-card-body text-center">
+                            <div class="gift-card-price">10 000 ₽</div>
+                            <ul class="gift-card-features text-start mt-4 mb-4">
+                                <li>Действует 12 месяцев</li>
+                                <li>Электронный или печатный формат</li>
+                                <li>Можно комбинировать с другими сертификатами</li>
+                                <li>Доставка в течение 15 минут (электронный)</li>
+                                <li>Подарочная упаковка (для печатного)</li>
+                            </ul>
+                            <button class="btn btn-primary-bit w-100">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="gift-card h-100">
+                        <div class="gift-card-header">
+                            <h4>VIP</h4>
+                        </div>
+                        <div class="gift-card-body text-center">
+                            <div class="gift-card-price">25 000 ₽</div>
+                            <ul class="gift-card-features text-start mt-4 mb-4">
+                                <li>Действует 12 месяцев</li>
+                                <li>Электронный или печатный формат</li>
+                                <li>Можно комбинировать с другими сертификатами</li>
+                                <li>Доставка в течение 15 минут (электронный)</li>
+                                <li>Подарочная упаковка (для печатного)</li>
+                                <li>Персональная открытка от отправителя</li>
+                            </ul>
+                            <button class="btn btn-primary-bit w-100">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="gift-card h-100">
+                        <div class="gift-card-header">
+                            <h4>Индивидуальный</h4>
+                        </div>
+                        <div class="gift-card-body text-center">
+                            <div class="gift-card-price">Любой</div>
+                            <ul class="gift-card-features text-start mt-4 mb-4">
+                                <li>Действует 12 месяцев</li>
+                                <li>Электронный или печатный формат</li>
+                                <li>Можно комбинировать с другими сертификатами</li>
+                                <li>Доставка в течение 15 минут (электронный)</li>
+                                <li>Подарочная упаковка (для печатного)</li>
+                                <li>Персональная открытка от отправителя</li>
+                                <li>Вы сами выбираете номинал</li>
+                            </ul>
+                            <button class="btn btn-primary-bit w-100">Выбрать сумму</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Как это работает</h2>
+                <p class="text-muted">Простая схема покупки и использования подарочного сертификата</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="how-it-works-step">
+                        <div class="how-it-works-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>1. Покупка</h4>
+                        <p>Выберите номинал и оформляете заказ на сертификат</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="how-it-works-step">
+                        <div class="how-it-works-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>2. Получение</h4>
+                        <p>Получите сертификат по email или в нашем магазине</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="how-it-works-step">
+                        <div class="how-it-works-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h4>3. Подарок</h4>
+                        <p>Подарите сертификат другу, коллеге или близкому человеку</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="how-it-works-step">
+                        <div class="how-it-works-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4>4. Использование</h4>
+                        <p>Получатель выбирает товар в нашем магазине и оплачивает сертификатом</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Предпросмотр сертификата -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Как выглядит сертификат</h2>
+                    <p>Наши подарочные сертификаты имеют стильный дизайн и содержат всю необходимую информацию для их
+                        использования.</p>
+                    <p>Электронный сертификат приходит в формате PDF с уникальным кодом, который можно активировать при
+                        оформлении заказа на сайте или в магазине.</p>
+                    <p>Печатный сертификат выполнен на качественной бумаге с защитными элементами и вручается в
+                        подарочном конверте.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="certificate-preview text-center">
+                        <h3>Бит-Сити</h3>
+                        <p>Подарочный сертификат</p>
+                        <div class="my-4">
+                            <i class="fas fa-gift fa-3x text-primary-bit"></i>
+                        </div>
+                        <h4>Номинал: 10 000 ₽</h4>
+                        <p>Действителен до: 31.12.2024</p>
+                        <div class="certificate-code">BIT-XXXX-YYYY-ZZZZ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Часто задаваемые вопросы</h2>
+                <p class="text-muted">Ответы на популярные вопросы о подарочных сертификатах</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            <h5 class="mb-0">Как купить подарочный сертификат?</h5>
+                        </div>
+                        <div id="faq1" class="collapse show faq-body">
+                            <p>Вы можете приобрести сертификат онлайн на этой странице, выбрав нужный номинал и нажав
+                                кнопку "Купить". Также сертификаты доступны для покупки в наших розничных магазинах.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <h5 class="mb-0">Как долго действует сертификат?</h5>
+                        </div>
+                        <div id="faq2" class="collapse faq-body">
+                            <p>Все наши подарочные сертификаты действительны в течение 12 месяцев с момента покупки.
+                                Дата окончания срока действия указана на сертификате.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            <h5 class="mb-0">Можно ли продлить срок действия сертификата?</h5>
+                        </div>
+                        <div id="faq3" class="collapse faq-body">
+                            <p>Да, срок действия сертификата можно продлить один раз на 3 месяца, обратившись в нашу
+                                службу поддержки не позднее чем за 14 дней до истечения срока действия.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            <h5 class="mb-0">Что делать, если сумма покупки превышает номинал сертификата?</h5>
+                        </div>
+                        <div id="faq4" class="collapse faq-body">
+                            <p>Вы можете доплатить разницу любым удобным способом: наличными, банковской картой или
+                                другим сертификатом. Также можно комбинировать несколько сертификатов для одной покупки.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            <h5 class="mb-0">Можно ли обменять сертификат на деньги?</h5>
+                        </div>
+                        <div id="faq5" class="collapse faq-body">
+                            <p>Согласно законодательству РФ, подарочные сертификаты не подлежат обмену на денежные
+                                средства. Однако вы можете выбрать любой товар в нашем магазине на сумму сертификата.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-primary-bit text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Подарите технологичные эмоции!</h2>
+            <p class="lead mb-5">Выберите подарочный сертификат Бит-Сити и сделайте по-настоящему ценный подарок</p>
+            <a href="#certificates" class="btn btn-accent btn-lg px-5">Выбрать сертификат</a>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon me-2"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#" class="d-block mb-2">Доставка и оплата</a>
+                        <a href="#" class="d-block mb-2">Гарантия и возврат</a>
+                        <a href="#" class="d-block mb-2">FAQ</a>
+                        <a href="#" class="d-block mb-2">Бонусная программа</a>
+                        <a href="#" class="d-block">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#" class="d-block mb-2">О нас</a>
+                        <a href="#" class="d-block mb-2">Новости</a>
+                        <a href="#" class="d-block mb-2">Вакансии</a>
+                        <a href="#" class="d-block mb-2">Партнеры</a>
+                        <a href="#" class="d-block">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3">Способы оплаты</h6>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-mir payment-icon me-2" title="МИР"></i>
+                            <i class="fas fa-ruble-sign payment-icon me-2" title="Наличные/Перевод"></i>
+                            <i class="fab fa-qiwi payment-icon me-2" title="QIWI Кошелек"></i>
+                            <i class="fab fa-cc-visa payment-icon me-2" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация collapse элементов для FAQ
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqHeaders = document.querySelectorAll('.faq-header');
+
+            faqHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const icon = this.querySelector('.fas');
+                    if (this.classList.contains('collapsed')) {
+                        if (icon) icon.classList.replace('fa-plus', 'fa-minus');
+                    } else {
+                        if (icon) icon.classList.replace('fa-minus', 'fa-plus');
+                    }
+                });
+            });
+
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

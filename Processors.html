@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Процессоры | Бит-Сити - Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images\bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item active" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon me-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon me-3">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="Product catalog.html">Каталог</a></li>
+                    <li class="breadcrumb-item"><a href="#">Комплектующие</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Процессоры</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Заголовок страницы -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="fw-bold mb-0">Процессоры</h1>
+                <div class="d-flex align-items-center">
+                    <div class="me-3">
+                        <span class="me-2">Сортировка:</span>
+                        <select class="form-select form-select-sm" style="width: 180px;">
+                            <option selected>По популярности</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                            <option>По новизне</option>
+                            <option>По рейтингу</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="me-2">Показывать:</span>
+                        <select class="form-select form-select-sm" style="width: 80px;">
+                            <option selected>24</option>
+                            <option>36</option>
+                            <option>48</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Фильтры -->
+                <div class="col-lg-3">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary-bit text-white">
+                            <h5 class="mb-0">Фильтры</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Фильтр по производителю -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Производитель</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="intelCheck" checked>
+                                    <label class="form-check-label" for="intelCheck">
+                                        Intel
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="amdCheck" checked>
+                                    <label class="form-check-label" for="amdCheck">
+                                        AMD
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по сокету -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Сокет</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="socketAM5">
+                                    <label class="form-check-label" for="socketAM5">
+                                        AM5
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="socketAM4">
+                                    <label class="form-check-label" for="socketAM4">
+                                        AM4
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="socketLGA1700">
+                                    <label class="form-check-label" for="socketLGA1700">
+                                        LGA 1700
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="socketLGA1200">
+                                    <label class="form-check-label" for="socketLGA1200">
+                                        LGA 1200
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по количеству ядер -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Количество ядер</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cores4">
+                                    <label class="form-check-label" for="cores4">
+                                        4 ядра
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cores6">
+                                    <label class="form-check-label" for="cores6">
+                                        6 ядер
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cores8">
+                                    <label class="form-check-label" for="cores8">
+                                        8 ядер
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cores12">
+                                    <label class="form-check-label" for="cores12">
+                                        12 ядер и более
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Фильтр по цене -->
+                            <div class="mb-4">
+                                <h6 class="mb-3">Цена, ₽</h6>
+                                <div class="row g-2">
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm" placeholder="От"
+                                            value="5000">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm" placeholder="До"
+                                            value="150000">
+                                    </div>
+                                </div>
+                                <input type="range" class="form-range mt-2" min="5000" max="150000" step="1000"
+                                    id="priceRange">
+                            </div>
+
+                            <button class="btn btn-primary-bit w-100">Применить фильтры</button>
+                            <button class="btn btn-outline-secondary w-100 mt-2">Сбросить</button>
+                        </div>
+                    </div>
+
+                    <!-- Баннер -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Спецпредложение">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Собери свой ПК</h5>
+                            <p class="card-text">Скидка 10% на все комплектующие при сборке компьютера</p>
+                            <a href="#" class="btn btn-accent btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Список процессоров -->
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <!-- Процессор 1 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\8557a2af95be4dc9b97adef68d1e5f38.jpg" class="card-img-top"
+                                        alt="Intel Core i9-13900K">
+                                    <div class="discount-badge">-10%</div>
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i9-13900K</h5>
+                                    <p class="card-text text-muted small">LGA 1700, 24 ядра (8P+16E), до 5.8 ГГц, 36 МБ
+                                        кэш</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">64 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">58 490 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Процессор 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\9777c009-bd82-4ca0-9f9e-a9326e73e3d0.png" class="card-img-top"
+                                        alt="AMD Ryzen 9 7950X">
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">AMD Ryzen 9 7950X</h5>
+                                    <p class="card-text text-muted small">AM5, 16 ядер, до 5.7 ГГц, 80 МБ кэш, 170 Вт
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">67 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Процессор 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\0a31b85d-a248-430d-a0bf-edf9c02f971b.png" class="card-img-top"
+                                        alt="Intel Core i7-13700K">
+                                    <div class="discount-badge">-5%</div>
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i7-13700K</h5>
+                                    <p class="card-text text-muted small">LGA 1700, 16 ядер (8P+8E), до 5.4 ГГц, 30 МБ
+                                        кэш</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">44 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">42 740 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Процессор 4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\9a309418-6607-48cd-bca2-c6cbe8b3663d.png" class="card-img-top"
+                                        alt="AMD Ryzen 7 7800X3D">
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">AMD Ryzen 7 7800X3D</h5>
+                                    <p class="card-text text-muted small">AM5, 8 ядер, до 5.0 ГГц, 104 МБ кэш (3D
+                                        V-Cache)</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">39 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Процессор 5 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\605516b5-d81d-4b18-8dd2-503270cf6875 (1).png" class="card-img-top"
+                                        alt="Intel Core i5-13600K">
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Intel Core i5-13600K</h5>
+                                    <p class="card-text text-muted small">LGA 1700, 14 ядер (6P+8E), до 5.1 ГГц, 24 МБ
+                                        кэш</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold text-primary-bit">29 990 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Процессор 6 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 product-card">
+                                <div class="position-relative">
+                                    <img src="images\d52cae43-6137-4f5c-befc-4be7c183e3bf.png" class="card-img-top"
+                                        alt="AMD Ryzen 5 7600">
+                                    <div class="discount-badge">-7%</div>
+                                    <div class="wishlist-icon"><i class="far fa-heart"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">AMD Ryzen 5 7600</h5>
+                                    <p class="card-text text-muted small">AM5, 6 ядер, до 5.1 ГГц, 38 МБ кэш, 65 Вт</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-decoration-line-through text-muted me-2">21 990 ₽</span>
+                                            <span class="fw-bold text-primary-bit">20 450 ₽</span>
+                                        </div>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0 pt-0">
+                                    <button class="btn btn-primary-bit w-100">В корзину</button>
+                                    <button class="btn btn-outline-secondary w-100 mt-2">Быстрый просмотр</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сравнение процессоров -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Сравнение процессоров</h2>
+                <p class="text-muted">Выберите до 4 процессоров для сравнения характеристик</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-plus-circle fa-3x text-muted"></i>
+                            </div>
+                            <h5>Добавить процессор</h5>
+                            <p class="text-muted small">Выберите из списка</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-plus-circle fa-3x text-muted"></i>
+                            </div>
+                            <h5>Добавить процессор</h5>
+                            <p class="text-muted small">Выберите из списка</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-plus-circle fa-3x text-muted"></i>
+                            </div>
+                            <h5>Добавить процессор</h5>
+                            <p class="text-muted small">Выберите из списка</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-plus-circle fa-3x text-muted"></i>
+                            </div>
+                            <h5>Добавить процессор</h5>
+                            <p class="text-muted small">Выберите из списка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary-bit px-4" disabled>Сравнить</button>
+                <button class="btn btn-outline-secondary px-4 ms-2">Очистить</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Советы по выбору -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Как выбрать процессор?</h2>
+                <p class="text-muted">Полезные советы от наших экспертов</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h5>Количество ядер и потоков</h5>
+                            <p class="text-muted">Для офисных задач достаточно 4-6 ядер. Для игр и профессиональных
+                                задач выбирайте 8 ядер и более. Технологии Hyper-Threading (Intel) и SMT (AMD) удваивают
+                                количество потоков.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h5>Тактовая частота</h5>
+                            <p class="text-muted">Чем выше частота, тем быстрее процессор выполняет задачи. Современные
+                                процессоры автоматически повышают частоту (Turbo Boost) при нагрузке. Игровые ПК требуют
+                                высоких частот.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h5>Сокет и совместимость</h5>
+                            <p class="text-muted">Убедитесь, что сокет процессора совместим с вашей материнской платой.
+                                Intel LGA 1700 и AMD AM5 - актуальные сокеты для новых процессоров. Проверьте поддержку
+                                в спецификациях платы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon me-2"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html" class="d-block mb-2">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html" class="d-block mb-2">Гарантия и возврат</a>
+                        <a href="Bonus program.html" class="d-block mb-2">Бонусная программа</a>
+                        <a href="Gift certificates.html" class="d-block">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html" class="d-block mb-2">О нас</a>
+                        <a href="News.html" class="d-block mb-2">Новости</a>
+                        <a href="Job openings.html" class="d-block mb-2">Вакансии</a>
+                        <a href="Partners.html" class="d-block mb-2">Партнеры</a>
+                        <a href="Contacts.html" class="d-block">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <h6 class="text-white mb-3">Способы оплаты</h6>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-mir payment-icon me-2" title="МИР"></i>
+                            <i class="fas fa-ruble-sign payment-icon me-2" title="Наличные/Перевод"></i>
+                            <i class="fab fa-qiwi payment-icon me-2" title="QIWI Кошелек"></i>
+                            <i class="fab fa-cc-visa payment-icon me-2" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="Privacy policy.html" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                        <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация всплывающих подсказок
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Анимация карточек товаров
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.product-card, .category-card, .testimonial-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

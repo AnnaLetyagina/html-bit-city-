@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .news-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .news-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(13, 110, 253, 0.9);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .news-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .news-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-img {
+            transform: scale(1.05);
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .pagination .page-link {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/bit-city-logo.png.png" alt="Бит-Сити - Магазин компьютерной техники" height="60"
+                    class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="#">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="#">Мыши</a></li>
+                            <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="#">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="#" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="#" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Новости</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Заголовок страницы -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="fw-bold mb-3">Новости и события</h1>
+                    <p class="lead text-muted">Будьте в курсе последних событий, акций и новинок от Бит-Сити и мировых
+                        производителей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Поиск новостей...">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select">
+                        <option selected>Все категории</option>
+                        <option>Новинки</option>
+                        <option>Акции</option>
+                        <option>События</option>
+                        <option>Технологии</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Главная новость -->
+                <div class="col-lg-12 mb-4">
+                    <div class="card news-card border-0 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="news-img-container">
+                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                        class="news-img" alt="Главная новость">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body p-4">
+                                    <span class="badge bg-primary mb-2">Главная новость</span>
+                                    <h2 class="card-title">Новая линейка игровых ноутбуков ASUS ROG 2023</h2>
+                                    <p class="news-date mb-3"><i class="far fa-calendar-alt me-2"></i>15 октября 2023
+                                    </p>
+                                    <p class="card-text">Компания ASUS представила обновлённую линейку игровых ноутбуков
+                                        ROG (Republic of Gamers) с новейшими процессорами Intel 13-го поколения и
+                                        видеокартами NVIDIA RTX 40-й серии. В Бит-Сити уже доступны предзаказы с
+                                        эксклюзивными бонусами.</p>
+                                    <a href="#" class="btn btn-primary">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Остальные новости -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                    class="news-img" alt="Новость 1">
+                            </div>
+                            <span class="news-category">Технологии</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>10 октября 2023</p>
+                            <h3 class="card-title h5">Intel анонсирует процессоры 14-го поколения</h3>
+                            <p class="card-text">Новая серия процессоров Meteor Lake обещает революционную
+                                энергоэффективность и производительность. Ожидаем поставки в декабре.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
+                                    class="news-img" alt="Новость 2">
+                            </div>
+                            <span class="news-category">Акция</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>5 октября 2023</p>
+                            <h3 class="card-title h5">Чёрная пятница в Бит-Сити - скидки до 40%</h3>
+                            <p class="card-text">Специальные предложения на технику Apple, игровые ноутбуки и мониторы.
+                                Акция действует с 20 по 27 ноября.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1626&q=80"
+                                    class="news-img" alt="Новость 3">
+                            </div>
+                            <span class="news-category">Событие</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>28 сентября 2023</p>
+                            <h3 class="card-title h5">Турнир по Dota 2 в нашем магазине</h3>
+                            <p class="card-text">Приглашаем всех геймеров на локальный турнир с призовым фондом 50 000
+                                рублей. Регистрация открыта до 15 ноября.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                                    class="news-img" alt="Новость 4">
+                            </div>
+                            <span class="news-category">Новинка</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>20 сентября 2023</p>
+                            <h3 class="card-title h5">Поступили в продажу новые мониторы Samsung Odyssey</h3>
+                            <p class="card-text">Серия Neo G8 с матрицей Mini-LED и частотой 240 Гц уже доступна в нашем
+                                магазине. Тестируйте в демозоне!</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                    class="news-img" alt="Новость 5">
+                            </div>
+                            <span class="news-category">Технологии</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>15 сентября 2023</p>
+                            <h3 class="card-title h5">Обзор новой видеокарты AMD Radeon RX 7800 XT</h3>
+                            <p class="card-text">Наши эксперты протестировали новинку от AMD в современных играх.
+                                Результаты и сравнение с конкурентами.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card news-card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <div class="news-img-container">
+                                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                                    class="news-img" alt="Новость 6">
+                            </div>
+                            <span class="news-category">Акция</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="news-date"><i class="far fa-calendar-alt me-2"></i>10 сентября 2023</p>
+                            <h3 class="card-title h5">Специальные условия на сборку ПК</h3>
+                            <p class="card-text">При заказе сборки компьютера у нас - бесплатная установка ОС и
+                                антивируса. Акция действует до конца месяца.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пагинация -->
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Назад</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Вперед</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Рассылка -->
+    <section class="newsletter-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Подпишитесь на рассылку</h2>
+                    <p class="mb-5">Получайте эксклюзивные предложения, новости о скидках и новинках первыми</p>
+
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Ваш email">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Подписаться</button>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="agreeCheck">
+                                <label class="form-check-label" for="agreeCheck">
+                                    Я согласен на обработку персональных данных
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">Гарантия и возврат</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Бонусная программа</a>
+                        <a href="#">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="#">О нас</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнеры</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                                <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Анимация для карточек новостей
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.news-card');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Установка начального состояния для анимации
+            const cards = document.querySelectorAll('.news-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Запуск анимации при загрузке и скролле
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Бит-Сити | Магазин компьютерной техники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary-bit fw-bold">БИТ-СИТИ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Компьютеры и ноутбуки</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Ready-made PCs.html">Готовые ПК</a></li>
+                            <li><a class="dropdown-item" href="Laptops.html">Ноутбуки</a></li>
+                            <li><a class="dropdown-item" href="Monoblocks.html">Моноблоки</a></li>
+                            <li><a class="dropdown-item" href="Servers.html">Серверы</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Комплектующие</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Processors.html">Процессоры</a></li>
+                            <li><a class="dropdown-item" href="Video cards.html">Видеокарты</a></li>
+                            <li><a class="dropdown-item" href="Motherboards.html">Материнские платы</a></li>
+                            <li><a class="dropdown-item" href="Random access memory.html">Оперативная память</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Периферия</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="Keyboards.html">Клавиатуры</a></li>
+                            <li><a class="dropdown-item" href="Mice.html">Мыши</a></li>
+                            <li><a class="dropdown-item" href="Monitors.html">Мониторы</a></li>
+                            <li><a class="dropdown-item" href="Headphones.html">Наушники</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Stocks.html">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="The blog.html">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <input type="text" class="form-control" placeholder="Поиск товаров...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+
+                    <a href="page of the shopping cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+
+                    <a href="User Page.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    <a href="Wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хлебные крошки -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Контакты</h1>
+                <p class="lead">Мы всегда рады помочь вам с выбором и ответить на все вопросы</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="contact-card h-100 p-4 text-center">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Адрес</h4>
+                        <p>г. Белоярский<br>1 мкр. 11 дом 1 кв.</p>
+                        <a href="https://yandex.ru/maps/" class="btn btn-outline-primary-bit mt-2"
+                            target="_blank">Посмотреть на карте</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="contact-card h-100 p-4 text-center">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Телефоны</h4>
+                        <p>
+                            <a href="tel:+79048848016">+7 (904) 884-80-16</a><br>
+                            <a href="tel:+78005553535">8 (800) 555-35-35</a> (бесплатно по РФ)
+                        </p>
+                        <button class="btn btn-outline-primary-bit mt-2" data-bs-toggle="modal"
+                            data-bs-target="#callbackModal">Заказать звонок</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="contact-card h-100 p-4 text-center">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Электронная почта</h4>
+                        <p>
+                            <a href="mailto:bit-city@mail.ru">bit-city@mail.ru</a><br>
+                            (для коммерческих предложений)
+                        </p>
+                        <button class="btn btn-outline-primary-bit mt-2" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">Написать нам</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Режим работы</h3>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>Понедельник - Пятница</span>
+                                    <span class="fw-bold">09:00 - 20:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>Суббота</span>
+                                    <span class="fw-bold">10:00 - 18:00</span>
+                                </li>
+                                <li class="d-flex justify-content-between py-2">
+                                    <span>Воскресенье</span>
+                                    <span class="fw-bold">Выходной</span>
+                                </li>
+                            </ul>
+
+                            <div class="mt-4">
+                                <h5 class="mb-3">Служба поддержки</h5>
+                                <p>Техническая поддержка работает ежедневно с 08:00 до 22:00 по телефону <a
+                                        href="tel:+79048848016">+7 (904) 884-80-16</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Напишите нам</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Сообщение</label>
+                                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="agree" required>
+                                    <label class="form-check-label" for="agree">Я согласен на обработку персональных
+                                        данных</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary-bit w-100">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Карта -->
+    <section class="py-0">
+        <div class="container-fluid px-0">
+            <div class="ratio ratio-21x9">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&amp;source=constructor"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">БИТ-СИТИ</h5>
+                    <p>Магазин компьютерной техники и комплектующих. Технологии будущего уже сегодня.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Покупателям</h5>
+                    <div class="footer-links">
+                        <a href="Delivery and payment.html">Доставка и оплата</a>
+                        <a href="Warranty and Refund.html">Гарантия и возврат</a>
+                        <a href="Bonus program.html">Бонусная программа</a>
+                        <a href="Gift certificates.html">Подарочные сертификаты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Компания</h5>
+                    <div class="footer-links">
+                        <a href="About us.html">О нас</a>
+                        <a href="News.html">Новости</a>
+                        <a href="Job openings.html">Вакансии</a>
+                        <a href="Partners.html">Партнеры</a>
+                        <a href="Contacts.html">Контакты</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Контакты</h5>
+                    <div class="mb-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> г. Белоярский 1 мкр. 11 дом 1 кв.</p>
+                        <p><i class="fas fa-phone me-2"></i> +7 (904) 884-80-16</p>
+                        <p><i class="fas fa-envelope me-2"></i> bit-city@mail.ru</p>
+                    </div>
+                    <div>
+                        <div class="payment-methods">
+                            <h6 class="text-white mb-3">Способы оплаты</h6>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-mir payment-icon" title="МИР"></i>
+                                <i class="fas fa-ruble-sign payment-icon" title="Наличные/Перевод"></i>
+                                <i class="fab fa-qiwi payment-icon" title="QIWI Кошелек"></i>
+                                <i class="fab fa-cc-visa payment-icon" title="Visa"></i>
+                                <i class="fab fa-cc-mastercard payment-icon" title="Mastercard"></i>
+                                <span class="payment-icon" title="СБП (Система быстрых платежей)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Бит-Сити. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="Privacy policy.html" class="text-decoration-none me-3">Политика
+                        конфиденциальности</a>
+                    <a href="User agreement.html" class="text-decoration-none">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно обратного звонка -->
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Заказать обратный звонок</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="callbackName" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="callbackName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="callbackPhone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="callbackPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="callbackTime" class="form-label">Удобное время для звонка</label>
+                            <select class="form-select" id="callbackTime">
+                                <option value="anytime">В любое время</option>
+                                <option value="morning">Утро (9:00 - 12:00)</option>
+                                <option value="afternoon">День (12:00 - 15:00)</option>
+                                <option value="evening">Вечер (15:00 - 18:00)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="callbackAgree" required>
+                            <label class="form-check-label" for="callbackAgree">Я согласен на обработку персональных
+                                данных</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary-bit w-100">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно контактов -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Написать нам</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">Тема сообщения</label>
+                            <select class="form-select" id="contactSubject">
+                                <option value="question">Вопрос по товару</option>
+                                <option value="order">Вопрос по заказу</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="contactMessage" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="contactAgree" required>
+                            <label class="form-check-label" for="contactAgree">Я согласен на обработку персональных
+                                данных</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary-bit w-100">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Инициализация карты
+        document.addEventListener('DOMContentLoaded', function () {
+            // Можно добавить инициализацию карты через API Яндекс.Карт
+            // или другого сервиса при необходимости
+
+            // Анимация для контактных карточек
+            const contactCards = document.querySelectorAll('.contact-card');
+            contactCards.forEach(card => {
+                card.style.transform = 'translateY(20px)';
+                card.style.opacity = '0';
+                card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+            });
+
+            setTimeout(() => {
+                contactCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'translateY(0)';
+                        card.style.opacity = '1';
+                    }, index * 150);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+
+</html>
